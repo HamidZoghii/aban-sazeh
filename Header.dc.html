@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&family=Vazirmatn:wght@100..900&display=swap">
+<style>
+  html,body{margin:0;padding:0}
+  a{color:#8A6A4A;text-decoration:none}
+  a:hover{color:#171717}
+  ::selection{background:#E5E0D6;color:#171717}
+  a:focus-visible,button:focus-visible{outline:2px solid #8A6A4A;outline-offset:4px}
+
+</style>
+</helmet>
+<header dir="rtl" style="position:fixed;top:0;left:0;right:0;z-index:200;font-family:Vazirmatn,sans-serif;background:{{ barBg }};backdrop-filter:blur(18px) saturate(1.1);-webkit-backdrop-filter:blur(18px) saturate(1.1);border-bottom:1px solid {{ barBorder }};transition:background .45s ease,border-color .45s ease,box-shadow .45s ease;box-shadow:{{ barShadow }}">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,56px);height:{{ barHeight }};display:flex;align-items:center;justify-content:space-between;gap:24px;transition:height .5s ease">
+
+    <a href="index.dc.html" aria-label="آبان سازه — خانه" style="display:flex;align-items:center;gap:13px;text-decoration:none;color:inherit;flex:0 0 auto">
+      <svg width="26" height="30" viewBox="0 0 26 30" fill="none" aria-hidden="true" style="display:block;flex:0 0 auto">
+        <path d="M13 2 L24 28" stroke="{{ inkColor }}" stroke-width="1.15"></path>
+        <path d="M13 2 L2 28" stroke="{{ inkColor }}" stroke-width="1.15"></path>
+        <path d="M6.6 19 L19.4 19" stroke="#8A6A4A" stroke-width="1.15"></path>
+      </svg>
+      <span style="display:flex;align-items:baseline;gap:10px;white-space:nowrap">
+        <span style="font-size:19px;font-weight:600;letter-spacing:.01em;color:{{ inkColor }}">آبان سازه</span>
+        <span style="font-family:Inter,sans-serif;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:{{ mutedColor }}">Studio</span>
+      </span>
+    </a>
+
+    <nav aria-label="ناوبری اصلی" style="display:{{ navDisplay }};align-items:center;gap:clamp(28px,3.6vw,56px)">
+      <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="5">
+        <a href="{{ item.href }}" style="position:relative;white-space:nowrap;font-size:15px;font-weight:{{ item.weight }};color:{{ item.color }};text-decoration:none;padding:8px 0;transition:color .35s ease" style-hover="color:#8A6A4A">
+          {{ item.label }}
+          <span style="position:absolute;bottom:2px;left:0;right:0;height:1px;background:#8A6A4A;transform:scaleX({{ item.underline }});transform-origin:center;transition:transform .4s cubic-bezier(.2,.7,.3,1)"></span>
+        </a>
+      </sc-for>
+    </nav>
+
+    <div style="display:flex;align-items:center;gap:clamp(14px,2vw,26px);flex:0 0 auto">
+      <a href="tel:+982100000000" dir="ltr" style="display:{{ ctaDisplay }};font-family:Inter,sans-serif;font-size:14.5px;letter-spacing:.02em;color:{{ mutedColor }};text-decoration:none;white-space:nowrap" style-hover="color:#8A6A4A">+98 21 0000 0000</a>
+      <a href="contact.dc.html" style="display:{{ ctaDisplay }};position:relative;font-size:16px;color:{{ inkColor }};text-decoration:none;padding-bottom:8px;border-bottom:1px solid #8A6A4A;transition:color .35s ease" style-hover="color:#8A6A4A">شروع پروژه</a>
+      <button type="button" onClick="{{ toggleMenu }}" aria-label="منو" aria-expanded="{{ menuOpen }}" style="display:{{ burgerDisplay }};flex-direction:column;justify-content:center;gap:6px;width:44px;height:44px;background:none;border:none;cursor:pointer;padding:0">
+        <span style="display:block;width:24px;height:1px;background:{{ inkColor }};margin:0 auto"></span>
+        <span style="display:block;width:16px;height:1px;background:{{ inkColor }};margin:0 0 0 auto"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <div dir="rtl" style="position:fixed;inset:0;z-index:300;background:#F7F6F2;font-family:Vazirmatn,sans-serif;display:flex;flex-direction:column;padding:24px clamp(20px,6vw,48px) 40px">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <span style="font-size:18px;font-weight:600;color:#171717">آبان سازه</span>
+      <button type="button" onClick="{{ toggleMenu }}" aria-label="بستن منو" style="background:none;border:none;cursor:pointer;font-size:30px;line-height:1;color:#171717;padding:6px 4px">×</button>
+    </div>
+    <nav style="display:flex;flex-direction:column;margin-top:40px">
+      <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="5">
+        <a href="{{ item.href }}" style="display:flex;align-items:baseline;gap:16px;font-size:28px;font-weight:400;color:#171717;text-decoration:none;padding:18px 0;border-bottom:1px solid rgba(23,23,23,.08)">
+          <span style="font-family:Inter,sans-serif;font-size:11px;letter-spacing:.16em;color:#8A6A4A">{{ item.num }}</span>
+          {{ item.label }}
+        </a>
+      </sc-for>
+    </nav>
+    <a href="contact.dc.html" style="margin-top:auto;text-align:center;background:#171717;color:#F7F6F2;padding:20px;font-size:16px;text-decoration:none">شروع پروژه</a>
+  </div>
+</sc-if>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:140},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;about&quot;,&quot;services&quot;,&quot;projects&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;overlay&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { scrolled: false, menuOpen: false, narrow: false, en: false };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const s = window.scrollY > 40;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+    this.onResize = () => {
+      const n = window.innerWidth < 1120;
+      if (n !== this.state.narrow) this.setState({ narrow: n });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('resize', this.onResize);
+    this.onResize();
+    this.onScroll();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('resize', this.onResize);
+  }
+
+  renderVals() {
+    const over = (this.props.overlay ?? false) && !this.state.scrolled;
+    const ink = over ? '#F7F6F2' : '#171717';
+    const muted = over ? 'rgba(247,246,242,.78)' : '#5A5650';
+    const active = this.props.active ?? '';
+    const items = [
+      { label: 'خانه', href: 'index.dc.html', key: 'home', num: '۰۱' },
+      { label: 'درباره', href: 'about.dc.html', key: 'about', num: '۰۲' },
+      { label: 'خدمات', href: 'services.dc.html', key: 'services', num: '۰۳' },
+      { label: 'پروژه‌ها', href: 'projects.dc.html', key: 'projects', num: '۰۴' },
+      { label: 'تماس با ما', href: 'contact.dc.html', key: 'contact', num: '۰۵' }
+    ].map(i => ({
+      ...i,
+      color: i.key === active ? ink : muted,
+      weight: i.key === active ? 500 : 400,
+      underline: i.key === active ? 1 : 0
+    }));
+
+    return {
+      navItems: items,
+      menuOpen: this.state.menuOpen,
+      barBg: over ? 'transparent' : (this.state.scrolled ? 'rgba(247,246,242,.82)' : '#F7F6F2'),
+      barBorder: over ? 'transparent' : (this.state.scrolled ? 'rgba(23,23,23,.07)' : 'rgba(23,23,23,.09)'),
+      barHeight: this.state.scrolled ? '68px' : '88px',
+      barShadow: (!over && this.state.scrolled) ? '0 1px 24px rgba(23,23,23,.05)' : 'none',
+      inkColor: ink,
+      mutedColor: muted,
+      navDisplay: this.state.narrow ? 'none' : 'flex',
+      ctaDisplay: this.state.narrow ? 'none' : 'inline-block',
+      burgerDisplay: this.state.narrow ? 'flex' : 'none',
+      langLabel: this.state.en ? 'FA' : 'EN',
+      toggleLang: () => this.setState(s => ({ en: !s.en })),
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen }))
+    };
+  }
+}
+
+</script>
+</body>
+</html>

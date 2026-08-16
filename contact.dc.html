@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>تماس با آبان سازه | درخواست مشاوره طراحی معماری</title>
+<meta name="description" content="تماس با استودیو معماری آبان سازه؛ فرم درخواست پروژه، شماره تماس، ایمیل و آدرس دفتر. پاسخ‌گویی طی یک روز کاری.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Vazirmatn:wght@100..900&display=swap">
+<style>
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#F7F6F2;color:#171717}
+  a{color:#8A6A4A;text-decoration:none}
+  a:hover{color:#171717}
+  ::selection{background:#E5E0D6;color:#171717}
+  input,select,textarea{font-family:inherit}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:#8A6A4A!important}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+
+<div dir="rtl" lang="fa" style="font-family:Vazirmatn,sans-serif;background:#F7F6F2;color:#171717;overflow-x:hidden">
+  <dc-import name="Header" active="contact" style="position:absolute;top:0;right:0;left:0;height:0;z-index:250" hint-size="100%,92px"></dc-import>
+
+  <section class="page-hero" style="padding:clamp(122px,12vw,158px) clamp(24px,4vw,64px) clamp(36px,5vw,64px)">
+    <div style="max-width:1440px;margin:0 auto">
+      <nav aria-label="مسیر صفحه" style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.2em;color:#9aa0a8;margin-bottom:36px"><a href="index.dc.html" style="color:#9aa0a8">HOME</a> &nbsp;/&nbsp; <span style="color:#8A6A4A">CONTACT</span></nav>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(26px,3.6vw,60px);align-items:end">
+        <h1 style="margin:0;font-size:clamp(38px,4.6vw,60px);font-weight:500;line-height:1.3;max-width:14ch;text-wrap:balance">شروع گفت‌وگو درباره پروژه شما</h1>
+        <p style="margin:0;max-width:48ch;font-size:16px;line-height:1.9;color:#5A5650">فرم زیر را کامل کنید تا در اولین فرصت با شما تماس بگیریم و جلسه شناخت اولیه را هماهنگ کنیم.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" style="padding:0 clamp(24px,4vw,64px) clamp(46px,5.6vw,84px)">
+    <div style="max-width:1440px;margin:0 auto">
+      <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px">
+        <span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.16em;color:#8A6A4A">۰۱</span>
+        <span style="flex:1;height:1px;background:rgba(23,23,23,.14)"></span>
+        <span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#5A5650">Project Inquiry</span>
+      </div>
+    </div>
+    <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(30px,4vw,64px);align-items:start">
+
+      <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:26px">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px">
+          <label style="display:flex;flex-direction:column;gap:10px">
+            <span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#9aa0a8">نام و نام خانوادگی *</span>
+            <input type="text" name="name" required placeholder="نام شما" style="border:none;border-bottom:1px solid rgba(23,23,23,.22);background:transparent;padding:12px 0;font-size:16px;color:#171717;transition:border-color .3s ease">
+          </label>
+          <label style="display:flex;flex-direction:column;gap:10px">
+            <span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#9aa0a8">شماره تماس *</span>
+            <input type="tel" name="phone" required dir="ltr" placeholder="09xx xxx xxxx" style="border:none;border-bottom:1px solid rgba(23,23,23,.22);background:transparent;padding:12px 0;font-size:16px;color:#171717;text-align:right;transition:border-color .3s ease">
+          </label>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px">
+          <label style="display:flex;flex-direction:column;gap:10px">
+            <span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#9aa0a8">ایمیل</span>
+            <input type="email" name="email" dir="ltr" placeholder="you@example.com" style="border:none;border-bottom:1px solid rgba(23,23,23,.22);background:transparent;padding:12px 0;font-size:16px;color:#171717;text-align:right;transition:border-color .3s ease">
+          </label>
+          <label style="display:flex;flex-direction:column;gap:10px">
+            <span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#9aa0a8">نوع پروژه *</span>
+            <select name="type" required style="border:none;border-bottom:1px solid rgba(23,23,23,.22);background:transparent;padding:12px 0;font-size:16px;color:#171717;transition:border-color .3s ease">
+              <option value="">انتخاب کنید</option>
+              <option>مسکونی</option><option>ویلایی</option><option>اداری</option><option>تجاری</option><option>بازسازی</option>
+            </select>
+          </label>
+        </div>
+
+        <label style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#9aa0a8">بودجه تقریبی (اختیاری)</span>
+          <select name="budget" style="border:none;border-bottom:1px solid rgba(23,23,23,.22);background:transparent;padding:12px 0;font-size:16px;color:#171717;transition:border-color .3s ease">
+            <option value="">ترجیح می‌دهم بعداً بگویم</option>
+            <option>تا ۵ میلیارد تومان</option><option>۵ تا ۱۵ میلیارد تومان</option><option>۱۵ تا ۴۰ میلیارد تومان</option><option>بیش از ۴۰ میلیارد تومان</option>
+          </select>
+        </label>
+
+        <label style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#9aa0a8">پیام</span>
+          <textarea name="message" rows="5" placeholder="درباره زمین، متراژ، موقعیت و انتظارتان از پروژه بنویسید." style="border:1px solid rgba(23,23,23,.22);background:transparent;padding:16px;font-size:16px;line-height:2;color:#171717;resize:vertical;transition:border-color .3s ease"></textarea>
+        </label>
+
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;margin-top:6px">
+          <button type="submit" style="background:#171717;color:#F7F6F2;border:none;cursor:pointer;padding:18px 44px;font-family:inherit;font-size:16px;transition:background .35s ease" style-hover="background:#8A6A4A">ارسال درخواست</button>
+          <span style="font-size:14px;color:{{ statusColor }}">{{ status }}</span>
+        </div>
+        <p style="margin:0;font-size:13px;line-height:2;color:#9aa0a8">پاسخ‌گویی معمولاً طی یک روز کاری انجام می‌شود. اطلاعات پروژه شما محرمانه نگه داشته می‌شود و در اختیار شخص ثالث قرار نمی‌گیرد.</p>
+      </form>
+
+      <aside style="display:flex;flex-direction:column;gap:34px">
+        <div style="padding-top:24px;border-top:1px solid rgba(23,23,23,.14)">
+          <p style="margin:0 0 14px;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#9aa0a8">تلفن</p>
+          <a href="tel:+982100000000" dir="ltr" style="font-family:Inter,sans-serif;font-size:22px;color:#171717;display:block;text-align:right">+98 21 0000 0000</a>
+        </div>
+        <div style="padding-top:24px;border-top:1px solid rgba(23,23,23,.14)">
+          <p style="margin:0 0 14px;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#9aa0a8">ایمیل</p>
+          <a href="mailto:studio@abansazeh.com" dir="ltr" style="font-family:Inter,sans-serif;font-size:18px;color:#171717;display:block;text-align:right">studio@abansazeh.com</a>
+        </div>
+        <div style="padding-top:24px;border-top:1px solid rgba(23,23,23,.14)">
+          <p style="margin:0 0 14px;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#9aa0a8">آدرس دفتر</p>
+          <p style="margin:0;font-size:16px;line-height:2.1;color:#171717">تهران، خیابان نمونه، پلاک ۰۰<br>طبقه دوم، استودیو آبان<br><span style="color:#5A5650;font-size:14px">شنبه تا چهارشنبه، ۱۰:۰۰ تا ۱۸:۰۰</span></p>
+        </div>
+        <div style="padding-top:24px;border-top:1px solid rgba(23,23,23,.14);display:flex;flex-direction:column;gap:14px">
+          <p style="margin:0;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#9aa0a8">شبکه‌های اجتماعی</p>
+          <div style="display:flex;flex-wrap:wrap;gap:22px;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.16em">
+            <a href="#" style="color:#5A5650">INSTAGRAM</a><a href="#" style="color:#5A5650">LINKEDIN</a><a href="#" style="color:#5A5650">PINTEREST</a>
+          </div>
+        </div>
+        <a href="https://wa.me/00000000000" style="display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid rgba(23,23,23,.22);padding:20px 24px;color:#171717;text-decoration:none;transition:border-color .3s ease,background .3s ease" style-hover="border-color:#8A6A4A;background:#F0EDE7">
+          <span style="font-size:16px">گفت‌وگو در واتساپ</span>
+          <span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.2em;color:#8A6A4A">WHATSAPP →</span>
+        </a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="map" style="padding:0 clamp(24px,4vw,64px) clamp(64px,9vw,140px)">
+    <div style="max-width:1440px;margin:0 auto;position:relative;aspect-ratio:21/9;min-height:280px;background:repeating-linear-gradient(90deg,#EDEAE4 0 1px,transparent 1px 64px),repeating-linear-gradient(0deg,#EDEAE4 0 1px,transparent 1px 64px),#F0EDE7;display:flex;align-items:center;justify-content:center;border:1px solid rgba(23,23,23,.1)">
+      <div style="text-align:center">
+        <div style="width:14px;height:14px;background:#8A6A4A;border-radius:50%;margin:0 auto 18px"></div>
+        <p style="margin:0;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.2em;color:#8b8478">MAP EMBED SLOT — GOOGLE MAPS / NESHAN IFRAME</p>
+        <p style="margin:10px 0 0;font-size:14px;color:#5A5650">موقعیت دفتر آبان سازه</p>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,460px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { sent: false };
+  renderVals() {
+    return {
+      status: this.state.sent ? 'درخواست شما ثبت شد — به‌زودی تماس می‌گیریم.' : '',
+      statusColor: '#8A6A4A',
+      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+
+</script>
+</body>
+</html>

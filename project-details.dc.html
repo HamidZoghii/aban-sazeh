@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>پروژه | آبان سازه</title>
+<meta name="description" content="ویلای کرانه، لواسان؛ ۴۲۰ متر مربع، طراحی معماری و داخلی و اجرا توسط آبان سازه. کانسپت، پلان، مصالح و گالری پروژه.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Vazirmatn:wght@100..900&display=swap">
+<style>
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#F7F6F2;color:#171717}
+  a{color:#8A6A4A;text-decoration:none}
+  a:hover{color:#171717}
+  ::selection{background:#E5E0D6;color:#171717}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+
+<div dir="rtl" lang="fa" style="font-family:Vazirmatn,sans-serif;background:#F7F6F2;color:#171717;overflow-x:hidden">
+  <dc-import name="Header" active="projects" overlay="{{ true }}" style="position:absolute;top:0;right:0;left:0;height:0;z-index:250" hint-size="100%,92px"></dc-import>
+
+  <section class="hero" style="position:relative;height:92vh;min-height:520px;display:flex;align-items:flex-end;overflow:hidden">
+    <div data-parallax style="position:absolute;inset:-6% 0;will-change:transform">
+      <img data-hero src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='9'%3E%3Crect width='16' height='9' fill='%23D9D2C5'/%3E%3C/svg%3E" alt="{{ heroAlt }}" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div style="position:absolute;inset:0;background:linear-gradient(195deg,rgba(16,25,35,.66) 0%,rgba(16,25,35,.4) 40%,rgba(16,25,35,.9) 100%)"></div>
+    <div style="position:absolute;inset:clamp(14px,1.6vw,24px);border:1px solid rgba(247,246,242,.18);pointer-events:none"></div>
+    <div style="position:relative;width:100%;max-width:1440px;margin:0 auto;padding:clamp(120px,18vh,180px) clamp(24px,4vw,64px) clamp(48px,7vh,88px)">
+      <p style="margin:0 0 22px;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.26em;color:rgba(247,246,242,.72)"><a href="projects.dc.html" style="color:rgba(247,246,242,.72)">PROJECTS</a> &nbsp;/&nbsp; {{ latin }}</p>
+      <h1 style="margin:0;font-size:clamp(38px,4.6vw,60px);font-weight:500;line-height:1.3;color:#F7F6F2">{{ title }}</h1>
+      <div style="display:flex;flex-wrap:wrap;gap:clamp(18px,3vw,52px);margin-top:34px;color:rgba(247,246,242,.75);font-size:14.5px;white-space:nowrap">
+        <sc-for list="{{ chips }}" as="c" hint-placeholder-count="5"><span>{{ c }}</span></sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section class="facts" style="padding:clamp(64px,8vw,128px) clamp(24px,4vw,64px)">
+    <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:clamp(22px,2.6vw,40px)">
+      <sc-for list="{{ facts }}" as="f" hint-placeholder-count="6">
+        <div data-reveal style="border-top:1px solid rgba(23,23,23,.16);padding-top:22px">
+          <p style="margin:0 0 14px;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#9aa0a8">{{ f.label }}</p>
+          <p style="margin:0;font-size:17px;line-height:1.8">{{ f.value }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section class="concept" style="padding:0 clamp(24px,4vw,64px) clamp(46px,5.6vw,84px)">
+    <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(30px,4.2vw,68px)">
+      <div data-reveal>
+        <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px"><span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.16em;color:#8A6A4A">۰۱</span><span style="flex:1;height:1px;background:rgba(23,23,23,.14)"></span><span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#5A5650">Concept</span></div>
+        <h2 style="margin:0;font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4;max-width:16ch">{{ conceptTitle }}</h2>
+      </div>
+      <div data-reveal>
+        <p style="margin:0;font-size:16px;line-height:1.9.2;color:#5A5650">{{ conceptP1 }}</p>
+        <p style="margin:22px 0 0;font-size:16px;line-height:1.9.2;color:#5A5650">{{ conceptP2 }}</p>
+        <p dir="ltr" style="margin:36px 0 0;text-align:right;font-family:'Cormorant Garamond',serif;font-size:clamp(21px,2.1vw,30px);font-style:italic;line-height:1.6;color:#8A6A4A">{{ conceptQuote }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blueprint" style="background:#101923;color:#F7F6F2;padding:clamp(64px,8vw,128px) clamp(24px,4vw,64px)">
+    <div style="max-width:1440px;margin:0 auto">
+      <div data-reveal><div style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px"><span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.16em;color:#8A6A4A">۰۲</span><span style="flex:1;height:1px;background:rgba(247,246,242,.18)"></span><span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:rgba(247,246,242,.5)">Drawings</span></div></div>
+      <h2 data-reveal style="margin:0 0 clamp(24px,2.8vw,38px);font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4">پلان و مقطع</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(20px,2.4vw,36px)">
+
+        <figure data-blueprint style="margin:0;position:relative;aspect-ratio:4/3;background:#101923;border:1px solid rgba(247,246,242,.14)">
+          <svg viewBox="0 0 400 300" style="position:absolute;inset:0;width:100%;height:100%" aria-label="پلان طبقه همکف — {{ title }}">
+            <g stroke="#8A6A4A" stroke-width="1" fill="none" stroke-opacity=".3">
+              <path d="M0 75 H400"></path><path d="M0 150 H400"></path><path d="M0 225 H400"></path>
+              <path d="M100 0 V300"></path><path d="M200 0 V300"></path><path d="M300 0 V300"></path>
+            </g>
+            <g data-draw stroke="#F7F6F2" stroke-width="1.6" fill="none" stroke-linecap="square">
+              <rect x="36" y="40" width="328" height="220"></rect>
+              <path d="M36 150 H190"></path>
+              <path d="M190 40 V260"></path>
+              <path d="M190 190 H364"></path>
+              <path d="M280 190 V260"></path>
+              <rect x="220" y="70" width="70" height="48"></rect>
+              <path d="M36 96 H66"></path>
+              <path d="M110 260 V216"></path>
+              <path d="M300 40 V70"></path>
+            </g>
+            <g data-draw stroke="#8A6A4A" stroke-width="1.2" fill="none">
+              <path d="M190 150 A 42 42 0 0 1 232 192"></path>
+            </g>
+          </svg>
+          <figcaption style="position:absolute;bottom:14px;right:16px;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.2em;color:rgba(247,246,242,.55);z-index:2">GROUND FLOOR PLAN 1:200</figcaption>
+        </figure>
+
+        <figure data-blueprint style="margin:0;position:relative;aspect-ratio:4/3;background:#101923;border:1px solid rgba(247,246,242,.14)">
+          <svg viewBox="0 0 400 300" style="position:absolute;inset:0;width:100%;height:100%" aria-label="مقطع طولی — {{ title }}">
+            <g stroke="#8A6A4A" stroke-width="1" fill="none" stroke-opacity=".3">
+              <path d="M0 100 H400"></path><path d="M0 200 H400"></path><path d="M133 0 V300"></path><path d="M266 0 V300"></path>
+            </g>
+            <g data-draw stroke="#F7F6F2" stroke-width="1.6" fill="none" stroke-linecap="square">
+              <path d="M20 250 H380"></path>
+              <path d="M40 250 V150 H160 V90 H280 V190 H380"></path>
+              <path d="M40 200 H160"></path>
+              <path d="M160 150 H280"></path>
+              <path d="M280 250 V190"></path>
+              <path d="M70 250 V200"></path>
+              <path d="M200 150 V250"></path>
+              <path d="M300 190 H380"></path>
+            </g>
+          </svg>
+          <img data-reveal-img src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='9'%3E%3Crect width='16' height='9' fill='%23D9D2C5'/%3E%3C/svg%3E" alt="نمای اجراشده — {{ title }}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;clip-path:inset(0 0 100% 0);transition:opacity 1.1s ease .2s,clip-path 1.3s cubic-bezier(.2,.7,.2,1) .2s">
+          <figcaption style="position:absolute;bottom:14px;right:16px;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.2em;color:rgba(247,246,242,.55);z-index:2">SECTION → BUILT</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" style="padding:clamp(64px,8vw,128px) clamp(24px,4vw,64px)">
+    <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));grid-auto-flow:dense;gap:clamp(16px,2vw,28px)">
+      <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="5">
+        <figure data-reveal style="margin:0;grid-column:span {{ g.span }};overflow:hidden">
+          <img src="{{ g.img }}" alt="{{ g.alt }}" loading="lazy" style="width:100%;aspect-ratio:{{ g.ratio }};object-fit:cover;display:block">
+        </figure>
+      </sc-for>
+    </div>
+  </section>
+
+  <section class="materials" style="background:#E5E0D6;padding:clamp(64px,8vw,128px) clamp(24px,4vw,64px)">
+    <div style="max-width:1440px;margin:0 auto">
+      <div data-reveal><div style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px"><span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.16em;color:#8a5c40">۰۳</span><span style="flex:1;height:1px;background:rgba(23,23,23,.2)"></span><span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#5A5650">Materials & Details</span></div></div>
+      <h2 data-reveal style="margin:0 0 clamp(24px,2.8vw,38px);font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4">مصالح و جزئیات</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:clamp(24px,3vw,44px)">
+        <sc-for list="{{ materials }}" as="m" hint-placeholder-count="4">
+          <div data-reveal style="border-top:1px solid rgba(23,23,23,.22);padding-top:24px">
+            <div style="height:64px;background:{{ m.swatch }};margin-bottom:24px"></div>
+            <h3 style="margin:0 0 12px;font-size:20px;font-weight:500;line-height:1.5">{{ m.title }}</h3>
+            <p style="margin:0;font-size:14.5px;line-height:2;color:#5c6470">{{ m.text }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section class="credits" style="padding:clamp(64px,8vw,128px) clamp(24px,4vw,64px)">
+    <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(24px,4vw,64px)">
+      <div data-reveal>
+        <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px"><span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.16em;color:#8A6A4A">۰۴</span><span style="flex:1;height:1px;background:rgba(23,23,23,.14)"></span><span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#5A5650">Credits</span></div>
+        <h2 style="margin:0;font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4">تیم و اعتبارات</h2>
+      </div>
+      <sc-for list="{{ credits }}" as="c" hint-placeholder-count="4">
+        <div data-reveal style="padding-top:22px;border-top:1px solid rgba(23,23,23,.12)">
+          <p style="margin:0 0 10px;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#9aa0a8">{{ c.role }}</p>
+          <p style="margin:0;font-size:16px;line-height:1.9">{{ c.name }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section class="related" style="background:#F0EDE7;padding:clamp(64px,8vw,128px) clamp(24px,4vw,64px)">
+    <div style="max-width:1440px;margin:0 auto">
+      <h2 data-reveal style="margin:0 0 clamp(28px,4vw,48px);font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4">پروژه‌های مرتبط</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(20px,2.6vw,40px)">
+        <sc-for list="{{ related }}" as="r" hint-placeholder-count="3">
+          <a href="{{ r.href }}" data-reveal style="display:block;text-decoration:none;color:inherit">
+            <img src="{{ r.img }}" alt="{{ r.alt }}" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block">
+            <h3 style="margin:18px 0 8px;font-size:20px;font-weight:500;line-height:1.5">{{ r.title }}</h3>
+            <p style="margin:0;font-size:13px;color:#5A5650">{{ r.meta }}</p>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" style="padding:clamp(64px,8vw,128px) clamp(24px,4vw,64px);text-align:center">
+    <h2 data-reveal style="margin:0;font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4;text-wrap:balance">پروژه‌ای مشابه در ذهن دارید؟</h2>
+    <div data-reveal style="display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-top:40px">
+      <a href="contact.dc.html" style="background:#101923;color:#F7F6F2;padding:18px 42px;font-size:16px;text-decoration:none" style-hover="background:#8A6A4A;color:#F7F6F2">شروع پروژه</a>
+      <a href="projects.dc.html" style="border:1px solid rgba(23,23,23,.25);color:#171717;padding:18px 42px;font-size:16px;text-decoration:none" style-hover="border-color:#8A6A4A">مشاهده پروژه‌ها</a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,460px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const d = this._data();
+    this._title = d.p.title + ' | پروژه معماری — آبان سازه';
+    const assert = () => { if (document.title !== this._title) document.title = this._title; };
+    assert();
+    this._titleObs = new MutationObserver(assert);
+    this._titleObs.observe(document.head, { childList: true, subtree: true, characterData: true });
+    const hero = document.querySelector('[data-hero]');
+    if (hero) hero.setAttribute('src', d.p.hero);
+    const built = document.querySelector('[data-reveal-img]');
+    if (built) built.setAttribute('src', d.p.gallery[0][0].replace('w=1600', 'w=1400'));
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const nodes = Array.from(document.querySelectorAll('[data-reveal]'));
+    const show = n => { n.style.opacity = '1'; n.style.transform = 'none'; };
+    if (!reduce) {
+      nodes.forEach((n, i) => {
+        n.style.opacity = '0';
+        n.style.transform = 'translateY(24px)';
+        n.style.transition = 'opacity .9s cubic-bezier(.2,.7,.2,1) ' + ((i % 5) * 0.06) + 's, transform .9s cubic-bezier(.2,.7,.2,1) ' + ((i % 5) * 0.06) + 's';
+      });
+      const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      nodes.forEach(n => io.observe(n));
+      this._io = io;
+      this._t = setTimeout(() => nodes.forEach(show), 4000);
+      this._onScroll = () => {
+        const h = document.querySelector('[data-parallax]');
+        if (h) h.style.transform = 'translateY(' + (window.scrollY * 0.16) + 'px)';
+      };
+      window.addEventListener('scroll', this._onScroll, { passive: true });
+    } else { nodes.forEach(show); }
+
+    document.querySelectorAll('[data-blueprint]').forEach(bp => {
+      const paths = Array.from(bp.querySelectorAll('[data-draw] > *'));
+      const img = bp.querySelector('[data-reveal-img]');
+      if (reduce) { if (img) { img.style.opacity = '1'; img.style.clipPath = 'inset(0 0 0% 0)'; } return; }
+      paths.forEach(p => {
+        const len = p.getTotalLength ? p.getTotalLength() : 400;
+        p.style.strokeDasharray = len;
+        p.style.strokeDashoffset = len;
+        p.style.transition = 'stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1)';
+      });
+      const io2 = new IntersectionObserver(es => es.forEach(e => {
+        if (!e.isIntersecting) return;
+        io2.disconnect();
+        paths.forEach((p, i) => setTimeout(() => { p.style.strokeDashoffset = 0; }, i * 120));
+        setTimeout(() => { if (img) { img.style.opacity = '1'; img.style.clipPath = 'inset(0 0 0% 0)'; } }, paths.length * 120 + 700);
+      }), { threshold: 0.3 });
+      io2.observe(bp);
+    });
+  }
+  componentWillUnmount() {
+    if (this._titleObs) this._titleObs.disconnect();
+    if (this._io) this._io.disconnect();
+    if (this._t) clearTimeout(this._t);
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+  }
+  _data() {
+    const P = {
+      'karaneh-villa': {
+        title: 'ویلای کرانه', latin: 'KARANEH VILLA',
+        chips: ['ویلایی','۴۲۰ متر مربع','لواسان','۱۴۰۳','تکمیل‌شده'],
+        hero: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2000&q=80',
+        heroAlt: 'فضای داخلی ویلای کرانه با نور طبیعی و مصالح روشن، لواسان',
+        conceptTitle: 'خانه‌ای که به شیب زمین گوش می‌دهد',
+        p1: 'زمین پروژه شیبی ملایم رو به دره داشت. به‌جای تراشیدن زمین، حجم خانه به سه بخش شکسته شد تا هر بخش روی یک تراز بنشیند و منظر بدون مانع در تمام فضاها ادامه پیدا کند.',
+        p2: 'نور از دو جهت وارد می‌شود: نور مستقیم جنوبی که با سایه‌بان‌های بتنی کنترل شده، و نور غیرمستقیم شمالی که فضاهای کار و مطالعه را روشن نگه می‌دارد. مصالح محدود و تکرارشونده‌اند تا آرامش بصری حفظ شود.',
+        quote: 'Three levels, one horizon.',
+        facts: [['Typology','ویلایی — مسکونی'],['Area','۴۲۰ متر مربع'],['Location','لواسان، تهران'],['Year','۱۴۰۳'],['Status','تکمیل‌شده'],['Scope','طراحی، نظارت و اجرا']],
+        materials: [
+          ['بتن اکسپوز','قالب‌بندی تخته‌ای با درز منظم؛ بافت اصلی احجام بیرونی.','#a9a49c'],
+          ['سنگ تراورتن','کف و دیوارهای ورودی با پرداخت مات و درزهای باریک.','#cfc4b2'],
+          ['چوب بلوط','کابینت و مبلمان ثابت با روکش طبیعی و روغن مات.','#9a7752'],
+          ['فلز مسی','دیتیل‌های ظریف: دستگیره، قاب چراغ و لبه پله.','#8A6A4A']
+        ],
+        gallery: [
+          ['https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1600&q=80','نمای بیرونی ویلای کرانه با احجام سفید',2,'16/9'],
+          ['https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=1200&q=80','نشیمن ویلا با مبلمان مینیمال و نور غیرمستقیم',1,'3/4'],
+          ['https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1200&q=80','آشپزخانه با نور مخفی و مصالح مات',1,'3/4'],
+          ['https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80','حمام با سنگ روشن و نورپردازی نرم',1,'3/4'],
+          ['https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=1600&q=80','دیتیل بتن اکسپوز و پله در ویلا',2,'16/9']
+        ]
+      },
+      'brick-shadow-house': {
+        title: 'خانه آجر و سایه', latin: 'BRICK & SHADOW HOUSE',
+        chips: ['مسکونی','۳۱۰ متر مربع','تهران','۱۴۰۲','تکمیل‌شده'],
+        hero: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=2000&q=80',
+        heroAlt: 'نمای آجری خانه آجر و سایه در نور شب، تهران',
+        conceptTitle: 'نمایی که سایه را می‌سازد',
+        p1: 'قطعه‌ای شمالی با عرض کم و همسایگی نزدیک. آجر با چیدمان مشبک روی بازشوها کشیده شد تا هم دید همسایه قطع شود و هم نور در طول روز بشکند و روی دیوارهای داخلی حرکت کند.',
+        p2: 'حیاط مرکزی کوچکی در میانه پلان، هوای تازه و نور را به طبقه پایین می‌رساند. رنگ‌ها به دو تُن محدود شده‌اند تا بازی سایه اصل ماجرا بماند.',
+        quote: 'The facade is a light filter.',
+        facts: [['Typology','مسکونی — آپارتمان'],['Area','۳۱۰ متر مربع'],['Location','تهران'],['Year','۱۴۰۲'],['Status','تکمیل‌شده'],['Scope','طراحی معماری و نظارت']],
+        materials: [
+          ['آجر نسوز','چیدمان مشبک با درز عمیق برای کنترل نور و دید.','#9c6a4e'],
+          ['بتن اکسپوز','دال‌ها و لبه‌های بالکن بدون پوشش اضافه.','#a9a49c'],
+          ['چوب گردو','قاب بازشوها و کفپوش فضاهای خصوصی.','#7d5a3c'],
+          ['فولاد مشکی','نرده و پروفیل باریک بازشوهای بلند.','#3a3f45']
+        ],
+        gallery: [
+          ['https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1600&q=80','نمای بیرونی خانه با نمای آجری',2,'16/9'],
+          ['https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=1200&q=80','نشیمن با نور شکسته از نمای مشبک',1,'3/4'],
+          ['https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80','راه‌پله با نور طبیعی',1,'3/4'],
+          ['https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=1200&q=80','اتاق خواب با کفپوش چوبی',1,'3/4'],
+          ['https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=1600&q=80','حیاط مرکزی و دیوار آجری',2,'16/9']
+        ]
+      },
+      'north-light-studio': {
+        title: 'استودیو نور شمالی', latin: 'NORTH LIGHT STUDIO',
+        chips: ['اداری','۶۵۰ متر مربع','تهران','۱۴۰۳','تکمیل‌شده'],
+        hero: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=2000&q=80',
+        heroAlt: 'فضای کار باز استودیو نور شمالی با نور یکنواخت',
+        conceptTitle: 'یک سقف، نور یکنواخت',
+        p1: 'کارفرما یک فضای کار بدون کنتراست تند می‌خواست. سقف با شِدهای شمالی طراحی شد تا نور بدون تابش مستقیم و بدون انعکاس روی نمایشگرها پخش شود.',
+        p2: 'پلان به سه نوار تقسیم شده است: کار متمرکز، جلسات و فضای مشترک. پارتیشن‌ها تا سقف نمی‌رسند تا حس یکپارچگی سقف حفظ شود.',
+        quote: 'Even light, all day.',
+        facts: [['Typology','اداری — استودیو'],['Area','۶۵۰ متر مربع'],['Location','تهران'],['Year','۱۴۰۳'],['Status','تکمیل‌شده'],['Scope','طراحی داخلی و اجرا']],
+        materials: [
+          ['بتن ساب‌خورده','کفپوش یکپارچه با پرداخت مات.','#b3aea6'],
+          ['چوب راش','میزهای کار و قفسه‌های ثابت.','#c09a6b'],
+          ['فلز سفید','سازه شِدها و ریل نورپردازی.','#e4e2dd'],
+          ['شیشه مات','پارتیشن اتاق جلسه با دید کنترل‌شده.','#cdd6d6']
+        ],
+        gallery: [
+          ['https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=1600&q=80','فضای کار باز با میزهای چوبی',2,'16/9'],
+          ['https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1200&q=80','اتاق جلسه با پارتیشن شیشه‌ای',1,'3/4'],
+          ['https://images.unsplash.com/photo-1600493572591-3c1a8b0a1a24?w=1200&q=80','گوشه استراحت و قفسه',1,'3/4'],
+          ['https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=1200&q=80','جزئیات سقف و نورپردازی',1,'3/4'],
+          ['https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600&q=80','فضای مشترک و آشپزخانه اداری',2,'16/9']
+        ]
+      },
+      'white-courtyard-villa': {
+        title: 'ویلای حیاط سفید', latin: 'WHITE COURTYARD VILLA',
+        chips: ['ویلایی','۵۸۰ متر مربع','نور','۱۴۰۱','تکمیل‌شده'],
+        hero: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=2000&q=80',
+        heroAlt: 'ویلای سفید با حیاط مرکزی و استخر در نور',
+        conceptTitle: 'خانه‌ای دور یک حیاط',
+        p1: 'اقلیم مرطوب شمال، حیاط سایه‌دار و کوران هوا را ضروری می‌کرد. تمام فضاها گرد یک حیاط مرکزی چیده شده‌اند تا هر اتاق دو جبهه بازشو داشته باشد.',
+        p2: 'سفیدی نما یک انتخاب اقلیمی است: بازتاب گرما و زمینه‌ای آرام برای سبزی محوطه. سایبان‌های عمیق، باران و آفتاب را از بازشوها دور می‌کنند.',
+        quote: 'A house wrapped around a void.',
+        facts: [['Typology','ویلایی — مسکونی'],['Area','۵۸۰ متر مربع'],['Location','نور، مازندران'],['Year','۱۴۰۱'],['Status','تکمیل‌شده'],['Scope','طراحی، نظارت و اجرا']],
+        materials: [
+          ['اندود سفید','نمای یکدست با پرداخت زبر و مقاوم به رطوبت.','#e8e4dd'],
+          ['چوب ترموود','سایبان‌ها و کفپوش تراس‌ها.','#a3764a'],
+          ['سنگ بازالت','کف حیاط و لبه استخر.','#5f6266'],
+          ['شیشه دوجداره','بازشوهای کشویی تمام‌قد.','#c9d4d6']
+        ],
+        gallery: [
+          ['https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80','نمای ویلای سفید از حیاط',2,'16/9'],
+          ['https://images.unsplash.com/photo-1600566753051-6057b5d5b3c1?w=1200&q=80','نشیمن با بازشوی تمام‌قد رو به حیاط',1,'3/4'],
+          ['https://images.unsplash.com/photo-1600573472573-2c1f8b1d1b8b?w=1200&q=80','راهرو دور حیاط',1,'3/4'],
+          ['https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=1200&q=80','اتاق خواب با منظر سبز',1,'3/4'],
+          ['https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&q=80','استخر و تراس چوبی',2,'16/9']
+        ]
+      },
+      'second-floor-renovation': {
+        title: 'بازسازی طبقه دوم', latin: 'SECOND FLOOR RENOVATION',
+        chips: ['بازسازی','۱۸۰ متر مربع','تهران','۱۴۰۴','در حال اجرا'],
+        hero: 'https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=2000&q=80',
+        heroAlt: 'فضای بازسازی‌شده طبقه دوم با دیوارهای روشن',
+        conceptTitle: 'کمترین تخریب، بیشترین تغییر',
+        p1: 'واحدی چهل‌ساله با پلان قطعه‌قطعه. فقط دو دیوار غیرباربر برداشته شد و در عوض جای آشپزخانه و سرویس‌ها جابه‌جا شد تا نور جبهه جنوبی به تمام عمق واحد برسد.',
+        p2: 'سازه موجود پنهان نشده است؛ تیر و ستون‌های قدیمی تمیز و رنگ شدند تا مرز میان قدیم و جدید خوانا بماند.',
+        quote: 'Keep the bones, change the flow.',
+        facts: [['Typology','بازسازی — مسکونی'],['Area','۱۸۰ متر مربع'],['Location','تهران'],['Year','۱۴۰۴'],['Status','در حال اجرا'],['Scope','طراحی داخلی و اجرا']],
+        materials: [
+          ['رنگ اکریلیک مات','دیوارها و سقف در یک تُن روشن.','#eae7e1'],
+          ['چوب کاج','کابینت و قفسه‌های ساخت کارگاه.','#c9a274'],
+          ['سرامیک بزرگ‌فرمت','کف آشپزخانه و سرویس‌ها.','#b8b4ae'],
+          ['فلز مشکی','دستگیره‌ها و قاب بازشوهای داخلی.','#3a3f45']
+        ],
+        gallery: [
+          ['https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1600&q=80','فضای نشیمن پس از بازسازی',2,'16/9'],
+          ['https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80','آشپزخانه جدید با کابینت چوبی',1,'3/4'],
+          ['https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1200&q=80','اتاق خواب با نور جنوبی',1,'3/4'],
+          ['https://images.unsplash.com/photo-1600585153490-76fb20a32601?w=1200&q=80','سرویس بهداشتی بازسازی‌شده',1,'3/4'],
+          ['https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&q=80','جزئیات تیر و ستون سازه موجود',2,'16/9']
+        ]
+      },
+      'aban-commercial-gallery': {
+        title: 'گالری تجاری آبان', latin: 'ABAN COMMERCIAL GALLERY',
+        chips: ['تجاری','۹۴۰ متر مربع','اصفهان','۱۴۰۲','تکمیل‌شده'],
+        hero: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=2000&q=80',
+        heroAlt: 'فضای داخلی گالری تجاری آبان با نور مرکزی',
+        conceptTitle: 'یک خیابان سرپوشیده',
+        p1: 'به‌جای راهروی تاریک و مغازه‌های روبه‌رو، مرکز پلان به یک شکاف نورگیر تبدیل شد؛ سه طبقه دور این شکاف قرار می‌گیرند و از هر تراز، تراز دیگر دیده می‌شود.',
+        p2: 'ویترین‌ها در یک قاب یکسان و پیوسته نشسته‌اند تا هویت بصری مجموعه از تبلیغات مستأجرها مستقل بماند.',
+        quote: 'A covered street, not a corridor.',
+        facts: [['Typology','تجاری — مجتمع'],['Area','۹۴۰ متر مربع'],['Location','اصفهان'],['Year','۱۴۰۲'],['Status','تکمیل‌شده'],['Scope','طراحی معماری و نظارت']],
+        materials: [
+          ['سنگ کرم','کفپوش گذرگاه‌ها و پله‌های اصلی.','#d3c8b4'],
+          ['فلز برنجی','قاب یکسان ویترین‌ها.','#a8823f'],
+          ['بتن اکسپوز','دیوارهای هسته و راه‌پله‌های فرار.','#a9a49c'],
+          ['شیشه سکوریت','جداره ویترین‌ها و جان‌پناه ترازها.','#c9d4d6']
+        ],
+        gallery: [
+          ['https://images.unsplash.com/photo-1519566335946-e6f65f0f4fdf?w=1600&q=80','فضای مرکزی گالری با نورگیر',2,'16/9'],
+          ['https://images.unsplash.com/photo-1567958451986-2de427a4a0be?w=1200&q=80','ویترین‌ها در قاب برنجی',1,'3/4'],
+          ['https://images.unsplash.com/photo-1555636222-cae831e670b3?w=1200&q=80','پله اصلی و جان‌پناه شیشه‌ای',1,'3/4'],
+          ['https://images.unsplash.com/photo-1580828343064-fde4fc206bc6?w=1200&q=80','گذرگاه طبقه دوم',1,'3/4'],
+          ['https://images.unsplash.com/photo-1524578271613-d550eacf6090?w=1600&q=80','نمای بیرونی مجموعه در غروب',2,'16/9']
+        ]
+      },
+      'stair-house': {
+        title: 'خانه پلکان', latin: 'STAIR HOUSE',
+        chips: ['مسکونی','۲۴۰ متر مربع','کرج','۱۴۰۴','در حال اجرا'],
+        hero: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=2000&q=80',
+        heroAlt: 'خانه پلکان با احجام پله‌ای رو به شیب زمین، کرج',
+        conceptTitle: 'پله‌ای که خانه را می‌سازد',
+        p1: 'شیب تند زمین اجازه یک کف یکپارچه نمی‌داد. خانه به چهار نیم‌طبقه تقسیم شد و پله میانی، به‌جای یک عنصر ارتباطی، به ستون فقرات و محل نشستن و مطالعه تبدیل شد.',
+        p2: 'هر نیم‌طبقه یک بازشو گوشه‌ای دارد تا از دو جهت نور بگیرد. جداره پله از بتن اکسپوز اجرا شده تا مرز حرکت و سکون خوانا بماند.',
+        quote: 'The stair is the plan.',
+        facts: [['Typology','مسکونی — ویلایی'],['Area','۲۴۰ متر مربع'],['Location','کرج'],['Year','۱۴۰۴'],['Status','در حال اجرا'],['Scope','طراحی معماری و نظارت']],
+        materials: [
+          ['بتن اکسپوز','جداره پله مرکزی و دیوارهای حائل.','#a9a49c'],
+          ['چوب کاج','کف نیم‌طبقه‌ها و نشیمن‌های ثابت.','#c9a274'],
+          ['فولاد مشکی','نرده باریک و پروفیل بازشوهای گوشه.','#3a3f45'],
+          ['اندود روشن','دیوارهای فضاهای خصوصی.','#e8e4dd']
+        ],
+        gallery: [
+          ['https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1600&q=80','پله مرکزی خانه پلکان',2,'16/9'],
+          ['https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=1200&q=80','نشیمن روی نیم‌طبقه',1,'3/4'],
+          ['https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=1200&q=80','اتاق خواب با بازشوی گوشه',1,'3/4'],
+          ['https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=1200&q=80','جزئیات نرده فولادی',1,'3/4'],
+          ['https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&q=80','نمای بیرونی احجام پله‌ای',2,'16/9']
+        ]
+      },
+      'seram-hq': {
+        title: 'دفتر مرکزی سِرام', latin: 'SERAM HEADQUARTERS',
+        chips: ['اداری','۱۲۰۰ متر مربع','تهران','۱۴۰۵','در حال اجرا'],
+        hero: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=2000&q=80',
+        heroAlt: 'فضای اداری دفتر مرکزی سِرام با نورگیر مرکزی',
+        conceptTitle: 'چهار طبقه دور یک نورگیر',
+        p1: 'ساختمانی با عمق زیاد و نمای محدود. نورگیر مرکزی چهار طبقه را به هم می‌دوزد و فضاهای کار را از دیوارهای بی‌بازشو دور می‌کند.',
+        p2: 'میان‌طبقه‌ها با پله‌های باز به هم وصل شده‌اند تا رفت‌وآمد روزمره جای جلسه‌های رسمی را بگیرد. آکوستیک با سقف‌های جاذب و فرش موضعی کنترل شده است.',
+        quote: 'Depth solved by a void.',
+        facts: [['Typology','اداری — دفتر مرکزی'],['Area','۱۲۰۰ متر مربع'],['Location','تهران'],['Year','۱۴۰۵'],['Status','در حال اجرا'],['Scope','طراحی داخلی و نظارت']],
+        materials: [
+          ['بتن ساب‌خورده','کفپوش گذرگاه‌ها و لابی.','#b3aea6'],
+          ['چوب راش','میزها و جداره اتاق‌های جلسه.','#c09a6b'],
+          ['فلز سفید','سازه پله باز و ریل نور.','#e4e2dd'],
+          ['نمد آکوستیک','سقف فضاهای کار متمرکز.','#8d8f93']
+        ],
+        gallery: [
+          ['https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=1600&q=80','فضای کار باز دفتر مرکزی',2,'16/9'],
+          ['https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1200&q=80','اتاق جلسه اصلی',1,'3/4'],
+          ['https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=1200&q=80','پله باز میان طبقات',1,'3/4'],
+          ['https://images.unsplash.com/photo-1600493572591-3c1a8b0a1a24?w=1200&q=80','گوشه استراحت کارکنان',1,'3/4'],
+          ['https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80','نورگیر مرکزی از تراز بالا',2,'16/9']
+        ]
+      },
+      'two-courtyard-villa': {
+        title: 'ویلای دو حیاط', latin: 'TWO COURTYARD VILLA',
+        chips: ['ویلایی','۷۲۰ متر مربع','کردان','۱۴۰۰','تکمیل‌شده'],
+        hero: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=2000&q=80',
+        heroAlt: 'ویلای دو حیاط با محوطه سبز، کردان',
+        conceptTitle: 'یک حیاط عمومی، یک حیاط خصوصی',
+        p1: 'کارفرما هم میزبانی جمعی می‌خواست و هم گوشه‌ای دور از مهمان. پلان به دو حیاط تقسیم شد: حیاط جنوبی برای مهمانی و استخر، حیاط شمالی آرام و بسته برای اتاق‌های خواب.',
+        p2: 'حجم میانی این دو را جدا می‌کند و در عین حال دید طولی از یک حیاط به حیاط دیگر را باز می‌گذارد.',
+        quote: 'Two courtyards, one axis.',
+        facts: [['Typology','ویلایی — مسکونی'],['Area','۷۲۰ متر مربع'],['Location','کردان'],['Year','۱۴۰۰'],['Status','تکمیل‌شده'],['Scope','طراحی، نظارت و اجرا']],
+        materials: [
+          ['سنگ لایم‌استون','نمای حجم میانی و کف حیاط‌ها.','#cfc4b2'],
+          ['چوب ترموود','سایبان‌ها و جداره استخر.','#a3764a'],
+          ['بتن اکسپوز','دیوارهای محیطی و حائل.','#a9a49c'],
+          ['فلز برنزی','قاب بازشوهای کشویی بلند.','#8a6a3c']
+        ],
+        gallery: [
+          ['https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80','نمای ویلا از حیاط جنوبی',2,'16/9'],
+          ['https://images.unsplash.com/photo-1600566753051-6057b5d5b3c1?w=1200&q=80','نشیمن با دید به دو حیاط',1,'3/4'],
+          ['https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=1200&q=80','اتاق خواب رو به حیاط شمالی',1,'3/4'],
+          ['https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80','سرویس با سنگ روشن',1,'3/4'],
+          ['https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&q=80','استخر و تراس در غروب',2,'16/9']
+        ]
+      }
+    };
+    const order = ['karaneh-villa','brick-shadow-house','north-light-studio','white-courtyard-villa','second-floor-renovation','aban-commercial-gallery','stair-house','seram-hq','two-courtyard-villa'];
+    let slug = '';
+    try { slug = new URLSearchParams(window.location.search).get('p') || ''; } catch (e) {}
+    if (!P[slug]) slug = order[0];
+    return { P: P, order: order, slug: slug, p: P[slug] };
+  }
+  renderVals() {
+    const d = this._data();
+    const p = d.p;
+    const i = d.order.indexOf(d.slug);
+    const rot = d.order.slice(i + 1).concat(d.order.slice(0, i));
+    const relSlugs = rot.slice(0, 3);
+    return {
+      title: p.title,
+      latin: p.latin,
+      chips: p.chips,
+      heroImg: p.hero,
+      heroAlt: p.heroAlt,
+      conceptTitle: p.conceptTitle,
+      conceptP1: p.p1,
+      conceptP2: p.p2,
+      conceptQuote: p.quote,
+      facts: p.facts.map(f => ({ label: f[0], value: f[1] })),
+      gallery: p.gallery.map(g => ({ img: g[0], alt: g[1], span: g[2], ratio: g[3] })),
+      materials: p.materials.map(m => ({ title: m[0], text: m[1], swatch: m[2] })),
+      credits: [
+        { role: 'Architecture', name: 'استودیو آبان سازه' },
+        { role: 'Interior Design', name: 'استودیو آبان سازه' },
+        { role: 'Construction', name: 'تیم اجرایی آبان سازه' },
+        { role: 'Photography', name: 'اعتبار عکاس — جایگزین شود' }
+      ],
+      related: relSlugs.map(s => ({
+        title: d.P[s].title,
+        meta: d.P[s].chips.slice(0, 3).join(' · '),
+        img: d.P[s].hero.replace('w=2000', 'w=1000'),
+        alt: d.P[s].heroAlt,
+        href: 'project-details.dc.html?p=' + s
+      }))
+    };
+  }
+}
+
+</script>
+</body>
+</html>

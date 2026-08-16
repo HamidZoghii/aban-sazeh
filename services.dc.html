@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>خدمات آبان سازه | طراحی معماری، طراحی داخلی، نظارت و اجرا</title>
+<meta name="description" content="خدمات استودیو آبان سازه: طراحی معماری، طراحی داخلی، نظارت، اجرا، طراحی ویلای لوکس، بازسازی لوکس، طراحی اداری و تجاری، نما، محوطه و مبلمان سفارشی.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Vazirmatn:wght@100..900&display=swap">
+<style>
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#F7F6F2;color:#171717}
+  a{color:#8A6A4A;text-decoration:none}
+  a:hover{color:#171717}
+  ::selection{background:#E5E0D6;color:#171717}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+
+<div dir="rtl" lang="fa" style="font-family:Vazirmatn,sans-serif;background:#F7F6F2;color:#171717;overflow-x:hidden">
+  <dc-import name="Header" active="services" style="position:absolute;top:0;right:0;left:0;height:0;z-index:250" hint-size="100%,88px"></dc-import>
+
+  <section class="page-hero" style="padding:clamp(122px,12vw,158px) clamp(24px,4vw,64px) clamp(40px,5vw,72px)">
+    <div style="max-width:1440px;margin:0 auto">
+      <nav aria-label="مسیر صفحه" style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.2em;color:#9aa0a8;margin-bottom:36px"><a href="index.dc.html" style="color:#9aa0a8">HOME</a> &nbsp;/&nbsp; <span style="color:#8A6A4A">SERVICES</span></nav>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(26px,3.6vw,60px);align-items:end">
+        <h1 data-reveal style="margin:0;font-size:clamp(38px,4.6vw,60px);font-weight:500;line-height:1.3;max-width:15ch;text-wrap:balance">خدمات طراحی، نظارت و اجرا</h1>
+        <p data-reveal style="margin:0;max-width:48ch;font-size:16px;line-height:1.9;color:#5A5650">چهار خدمت اصلی و هفت خدمت تکمیلی که می‌توانند به‌صورت مستقل یا در قالب یک قرارداد یکپارچه از کانسپت تا تحویل ارائه شوند.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="core-services" style="padding:0 clamp(24px,4vw,64px) clamp(48px,5.8vw,88px)">
+    <div style="max-width:1440px;margin:0 auto">
+      <div data-reveal style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px">
+        <span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.16em;color:#8A6A4A">۰۱</span>
+        <span style="flex:1;height:1px;background:rgba(23,23,23,.14)"></span>
+        <span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#5A5650">Core Services</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(28px,3.2vw,48px)">
+        <sc-for list="{{ core }}" as="s" hint-placeholder-count="4">
+          <article data-reveal style="border-top:1px solid rgba(23,23,23,.16);padding-top:24px">
+            <p style="margin:0;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.16em;color:#8A6A4A">{{ s.num }}</p>
+            <h2 style="margin:22px 0 16px;font-size:clamp(21px,1.9vw,27px);font-weight:500">{{ s.title }}</h2>
+            <p style="margin:0 0 24px;font-size:15px;line-height:2.1;color:#5A5650">{{ s.text }}</p>
+            <p style="margin:0;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.16em;line-height:2;color:#9aa0a8">{{ s.deliver }}</p>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section class="complementary" style="background:#E5E0D6;padding:clamp(64px,8vw,128px) clamp(24px,4vw,64px)">
+    <div style="max-width:1440px;margin:0 auto">
+      <div data-reveal style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px">
+        <span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.16em;color:#8a5c40">۰۲</span>
+        <span style="flex:1;height:1px;background:rgba(23,23,23,.2)"></span>
+        <span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#5A5650">Complementary</span>
+      </div>
+      <h2 data-reveal style="margin:0 0 clamp(26px,3vw,42px);font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4">خدمات تکمیلی</h2>
+      <ul style="list-style:none;margin:0;padding:0;border-top:1px solid rgba(23,23,23,.22)">
+        <sc-for list="{{ extra }}" as="e" hint-placeholder-count="7">
+          <li data-reveal data-row style="display:grid;grid-template-columns:56px minmax(140px,1fr) 1.5fr;gap:clamp(14px,3vw,44px);align-items:baseline;padding:clamp(19px,2.2vw,28px) 0;border-bottom:1px solid rgba(23,23,23,.22);transition:padding-inline .5s ease,background .5s ease">
+            <span style="font-family:Inter,sans-serif;font-size:12px;color:#8a5c40">{{ e.num }}</span>
+            <h3 style="margin:0;font-size:18.5px;font-weight:500">{{ e.title }}</h3>
+            <p style="margin:0;font-size:14.5px;line-height:2;color:#59606b">{{ e.text }}</p>
+          </li>
+        </sc-for>
+      </ul>
+    </div>
+  </section>
+
+  <section class="process" style="padding:clamp(64px,8vw,128px) clamp(24px,4vw,64px);background-image:linear-gradient(90deg,rgba(23,23,23,.05) 1px,transparent 1px);background-size:20% 100%;background-position:center">
+    <div style="max-width:1440px;margin:0 auto">
+      <div data-reveal style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px">
+        <span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.16em;color:#8A6A4A">۰۳</span>
+        <span style="flex:1;height:1px;background:rgba(23,23,23,.14)"></span>
+        <span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#5A5650">How It Works</span>
+      </div>
+      <h2 data-reveal style="margin:0 0 clamp(26px,3vw,42px);font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4;max-width:18ch">روند همکاری</h2>
+      <ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:clamp(24px,3vw,44px)">
+        <sc-for list="{{ steps }}" as="p" hint-placeholder-count="5">
+          <li data-reveal style="border-top:1px solid rgba(23,23,23,.16);padding-top:22px">
+            <p style="margin:0;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.16em;color:#8A6A4A">{{ p.num }}</p>
+            <h3 style="margin:18px 0 12px;font-size:18.5px;font-weight:500">{{ p.title }}</h3>
+            <p style="margin:0 0 18px;font-size:14px;line-height:2;color:#5A5650">{{ p.text }}</p>
+            <p style="margin:0;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.14em;color:#9aa0a8">{{ p.time }}</p>
+          </li>
+        </sc-for>
+      </ol>
+    </div>
+  </section>
+
+  <section class="faq" style="padding:0 clamp(24px,4vw,64px) clamp(52px,6.2vw,94px)">
+    <div style="max-width:1440px;margin:0 auto">
+      <div data-reveal style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px">
+        <span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.16em;color:#8A6A4A">۰۴</span>
+        <span style="flex:1;height:1px;background:rgba(23,23,23,.14)"></span>
+        <span style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#5A5650">FAQ</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(26px,3.6vw,60px);align-items:start">
+        <div data-reveal>
+          <h2 style="margin:0;font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4;max-width:11ch">پرسش‌های پرتکرار</h2>
+          <p style="margin:26px 0 0;max-width:34ch;font-size:16px;line-height:1.9.1;color:#5A5650">پاسخ پرسش‌تان اینجا نبود؟ در جلسه شناخت اولیه، فازبندی و برآورد پروژه شما به‌صورت مکتوب ارائه می‌شود.</p>
+          <a href="contact.dc.html" style="display:inline-block;margin-top:24px;font-size:15px;color:#171717;border-bottom:1px solid #8A6A4A;padding-bottom:6px;text-decoration:none" style-hover="color:#8A6A4A">پرسش خود را بفرستید</a>
+        </div>
+        <div data-reveal style="border-top:1px solid rgba(23,23,23,.16);align-self:start">
+          <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+            <div style="border-bottom:1px solid rgba(23,23,23,.16)">
+              <button type="button" onClick="{{ f.toggle }}" aria-expanded="{{ f.open }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;background:none;border:none;cursor:pointer;text-align:right;padding:clamp(20px,2.2vw,26px) 0;font-family:inherit;font-size:clamp(16px,1.4vw,18.5px);font-weight:{{ f.weight }};line-height:1.8;color:{{ f.color }};transition:color .3s ease">
+                <span>{{ f.q }}</span>
+                <span style="flex:0 0 auto;font-family:Inter,sans-serif;font-size:19px;color:#8A6A4A;transform:rotate({{ f.rot }}deg);transition:transform .4s cubic-bezier(.2,.7,.2,1)">+</span>
+              </button>
+              <div style="max-height:{{ f.h }};overflow:hidden;transition:max-height .5s cubic-bezier(.2,.7,.2,1),opacity .4s ease;opacity:{{ f.op }}">
+                <p style="margin:0;padding:0 0 26px;max-width:64ch;font-size:16px;line-height:1.9.15;color:#5A5650">{{ f.a }}</p>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" style="background:#101923;color:#F7F6F2;padding:clamp(64px,8vw,128px) clamp(24px,4vw,64px)">
+    <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,3.8vw,62px);align-items:end">
+      <div data-reveal>
+        <p dir="ltr" style="margin:0 0 24px;text-align:right;font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2vw,29px);font-style:italic;color:#8A6A4A">From concept to key handover.</p>
+        <h2 style="margin:0;font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4;max-width:16ch;text-wrap:balance">کدام خدمت برای پروژه شما مناسب است؟</h2>
+      </div>
+      <div data-reveal>
+        <p style="margin:0 0 clamp(26px,3.4vw,38px);max-width:42ch;font-size:16px;line-height:2.1;color:rgba(247,246,242,.62)">در جلسه اول، دامنه خدمات و فازبندی متناسب با پروژه شما مشخص می‌شود.</p>
+        <a href="contact.dc.html" style="background:#F7F6F2;color:#171717;padding:18px 42px;font-size:16px;white-space:nowrap;text-decoration:none;transition:background .4s ease,color .4s ease" style-hover="background:#8A6A4A;color:#F7F6F2">شروع پروژه</a>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,460px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { open: 0 };
+  componentDidMount() {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const nodes = Array.from(document.querySelectorAll('[data-reveal]'));
+    const show = n => { n.style.opacity = '1'; n.style.transform = 'none'; };
+    if (!reduce) {
+      nodes.forEach((n, i) => {
+        n.style.opacity = '0';
+        n.style.transform = 'translateY(22px)';
+        n.style.transition = 'opacity 1s cubic-bezier(.2,.7,.2,1) ' + ((i % 5) * 0.06) + 's, transform 1s cubic-bezier(.2,.7,.2,1) ' + ((i % 5) * 0.06) + 's';
+      });
+      const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      nodes.forEach(n => io.observe(n));
+      this._io = io;
+      this._t = setTimeout(() => nodes.forEach(show), 4000);
+      document.querySelectorAll('[data-row]').forEach(r => {
+        r.addEventListener('mouseenter', () => { r.style.paddingInline = '14px'; r.style.background = 'rgba(23,23,23,.05)'; });
+        r.addEventListener('mouseleave', () => { r.style.paddingInline = '0'; r.style.background = 'transparent'; });
+      });
+    } else { nodes.forEach(show); }
+  }
+  componentWillUnmount() { if (this._io) this._io.disconnect(); if (this._t) clearTimeout(this._t); }
+  renderVals() {
+    const faqData = [
+      { q: 'هزینه خدمات طراحی چگونه محاسبه می‌شود؟', a: 'هزینه بر اساس متراژ، نوع کاربری و دامنه خدمات (طراحی، نظارت، اجرا) محاسبه می‌شود. پس از جلسه شناخت، یک پیشنهاد مکتوب شامل فازها، خروجی‌ها و مبلغ هر فاز ارائه می‌شود.' },
+      { q: 'زمان‌بندی هر فاز طراحی و اجرا چقدر است؟', a: 'کانسپت معمولاً ۲ تا ۴ هفته، طراحی مقدماتی ۳ تا ۶ هفته و طراحی تفصیلی ۶ تا ۱۰ هفته زمان می‌برد. زمان اجرا به مقیاس پروژه و شرایط کارگاه بستگی دارد و در قرارداد تفکیک می‌شود.' },
+      { q: 'آیا اجرای پروژه توسط تیم شما انجام می‌شود؟', a: 'بله. اجرا با تیم داخلی استودیو و پیمانکاران منتخب انجام می‌شود. در پروژه‌هایی که کارفرما مجری خود را دارد، خدمات ما به نظارت کارگاهی و کنترل کیفی محدود می‌شود.' },
+      { q: 'روند همکاری و تحویل مدارک چگونه است؟', a: 'در پایان هر فاز، بسته مدارک شامل نقشه‌ها، تصاویر سه‌بعدی و برآورد به کارفرما تحویل و تأییدیه کتبی دریافت می‌شود. فاز بعد تنها پس از تأیید آغاز می‌شود.' },
+      { q: 'ضمانت کیفیت و کنترل جزئیات در اجرا چگونه انجام می‌شود؟', a: 'چک‌لیست کنترل کیفی برای هر مرحله اجرا تعریف می‌شود و بازدید دوره‌ای کارگاه با گزارش مکتوب انجام می‌گیرد. دیتیل‌های حساس پیش از اجرای انبوه به‌صورت نمونه ساخته و تأیید می‌شوند.' }
+    ];
+    return {
+      core: [
+        { num: '۰۱', title: 'طراحی معماری', text: 'از تحلیل زمین و ضوابط شهرسازی تا کانسپت، سازماندهی حجم و مدارک کامل فاز دو. هر تصمیم با مطالعه نور، دید و اقلیم پشتیبانی می‌شود.', deliver: 'CONCEPT · PLANS · 3D · PHASE 2 DOCS' },
+        { num: '۰۲', title: 'طراحی داخلی', text: 'چیدمان، نورپردازی، مصالح و مبلمان در یک زبان واحد؛ فضایی که کارکرد روزمره و کیفیت بصری را هم‌زمان تأمین می‌کند.', deliver: 'LAYOUT · LIGHTING · MATERIAL BOARD' },
+        { num: '۰۳', title: 'نظارت', text: 'بازدید دوره‌ای کارگاه، تطبیق اجرا با نقشه، کنترل کیفی مصالح و مدیریت تغییرات با گزارش مکتوب.', deliver: 'SITE REPORTS · QC CHECKLIST' },
+        { num: '۰۴', title: 'اجرا', text: 'اجرای کامل پروژه با تیم داخلی و پیمانکاران منتخب، همراه با زمان‌بندی، بودجه و مسئولیت کیفیت نهایی.', deliver: 'SCHEDULE · BUDGET · HANDOVER' }
+      ],
+      extra: [
+        { num: '۰۵', title: 'طراحی ویلای لوکس', text: 'پیوند دقیق میان منظر، اقلیم و فضاهای خصوصی؛ با توجه ویژه به حیاط، استخر و مسیرهای دسترسی.' },
+        { num: '۰۶', title: 'بازسازی لوکس', text: 'بازتعریف فضاهای موجود با کمترین تخریب و بیشترین تأثیر بر کیفیت نور و چیدمان.' },
+        { num: '۰۷', title: 'طراحی اداری', text: 'فضاهای کاری آرام با تفکیک صوتی، نور طبیعی و انعطاف در چیدمان تیم‌ها.' },
+        { num: '۰۸', title: 'طراحی تجاری', text: 'برندینگ فضایی، مسیر حرکت مشتری و نورپردازی ویترین برای فروشگاه و شوروم.' },
+        { num: '۰۹', title: 'طراحی نمای ساختمان', text: 'ترکیب‌بندی نما، انتخاب مصالح بادوام و طراحی دیتیل اتصالات و سایه‌اندازها.' },
+        { num: '۱۰', title: 'طراحی محوطه و لندسکیپ', text: 'حیاط، تراس و فضای سبز به‌عنوان امتداد فضای داخلی، نه عنصری جدا.' },
+        { num: '۱۱', title: 'طراحی مبلمان سفارشی', text: 'طراحی و ساخت مبلمان ثابت و متحرک متناسب با ابعاد و زبان پروژه.' }
+      ],
+      steps: [
+        { num: '۰۱', title: 'مشاوره و شناخت نیاز', text: 'بررسی زمین، برنامه فیزیکی، بودجه و انتظارات کارفرما.', time: '۱ SESSION' },
+        { num: '۰۲', title: 'کانسپت و اسکیس', text: 'تعیین موضع طراحی، دیاگرام عملکردی و اسکیس‌های اولیه.', time: '۲–۴ WEEKS' },
+        { num: '۰۳', title: 'طراحی مقدماتی', text: 'پلان، حجم، بررسی مصالح و برآورد اولیه هزینه.', time: '۳–۶ WEEKS' },
+        { num: '۰۴', title: 'طراحی تفصیلی', text: 'مدارک اجرایی، دیتیل و مستندسازی کامل پروژه.', time: '۶–۱۰ WEEKS' },
+        { num: '۰۵', title: 'اجرا و نظارت کیفی', text: 'کنترل کارگاه، گزارش دوره‌ای و تحویل نهایی.', time: 'PROJECT SCALE' }
+      ],
+      faqs: faqData.map((f, i) => {
+        const on = this.state.open === i;
+        return {
+          q: f.q, a: f.a, open: on,
+          rot: on ? 45 : 0,
+          h: on ? '360px' : '0px',
+          op: on ? 1 : 0,
+          color: on ? '#8A6A4A' : '#171717',
+          weight: on ? 500 : 400,
+          toggle: () => this.setState(s => ({ open: s.open === i ? -1 : i }))
+        };
+      })
+    };
+  }
+}
+
+</script>
+</body>
+</html>

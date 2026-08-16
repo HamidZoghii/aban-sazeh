@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ext-resource-dependency" content="./Header.dc.html" data-resource-id="headerDc" />
+<meta name="ext-resource-dependency" content="./Footer.dc.html" data-resource-id="footerDc" />
+<meta name="ext-resource-dependency" content="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Inter:wght@300;400;500&amp;family=Vazirmatn:wght@100..900&amp;display=swap" data-resource-id="googleFonts" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2000&amp;q=80" data-resource-id="featured" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=1200&amp;q=80" data-resource-id="proj1" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&amp;q=80" data-resource-id="proj2" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&amp;q=80" data-resource-id="proj3" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=1200&amp;q=80" data-resource-id="proj4" />
+<meta name="ext-resource-dependency" content="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200&amp;q=80" data-resource-id="proj5" />
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#101923">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#101923"/>
+    <g stroke="#8A6A4A" stroke-width="3" stroke-opacity=".4" fill="none">
+      <path d="M0 240 H1200"/><path d="M0 560 H1200"/><path d="M360 0 V800"/><path d="M840 0 V800"/>
+    </g>
+    <g stroke="#F7F6F2" stroke-width="7" fill="none" stroke-linecap="square">
+      <rect x="240" y="180" width="720" height="440"/>
+      <path d="M240 400 H600"/><path d="M600 180 V620"/><path d="M600 500 H960"/><path d="M780 500 V620"/>
+    </g>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>آبان سازه | استودیوی معماری و طراحی داخلی مینیمال و لوکس</title>
+<meta name="description" content="آبان سازه، استودیوی معماری و طراحی داخلی؛ طراحی معماری، طراحی داخلی، نظارت و اجرای پروژه‌های مسکونی، ویلایی، اداری و تجاری با رویکرد مینیمال و لوکس.">
+<meta name="keywords" content="طراحی معماری, استودیوی معماری, طراحی داخلی, طراحی ویلای لوکس, دفتر معماری مینیمال, اجرای پروژه معماری, نظارت معماری">
+<meta property="og:title" content="آبان سازه | معماری برای امروز، ماندگار برای فردا">
+<meta property="og:description" content="از مفهوم تا اجرا، طراحی به مثابه هنر.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Inter:wght@300;400;500&amp;family=Vazirmatn:wght@100..900&amp;display=swap">
+<style>
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#F7F6F2;color:#171717}
+  a{color:#8A6A4A;text-decoration:none}
+  a:hover{color:#171717}
+  ::selection{background:#E5E0D6;color:#171717}
+  @keyframes abanCue{0%,100%{transform:scaleY(.25);opacity:.3}50%{transform:scaleY(1);opacity:1}}
+  [data-rail]{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:rgba(23,23,23,.34) rgba(23,23,23,.08)}
+  [data-rail]::-webkit-scrollbar{height:8px}
+  [data-rail]::-webkit-scrollbar-track{background:rgba(23,23,23,.07)}
+  [data-rail]::-webkit-scrollbar-thumb{background:rgba(23,23,23,.34);border-radius:8px}
+  [data-rail]::-webkit-scrollbar-thumb:hover{background:rgba(23,23,23,.5)}
+  a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid #8A6A4A;outline-offset:4px;border-radius:1px}
+  .philosophy a:focus-visible,.testimonials a:focus-visible{outline-color:#8A6A4A}
+  .blueprint a:focus-visible,.hero a:focus-visible{outline-color:#F7F6F2}
+  [data-rail]:focus-visible{outline:2px solid #8A6A4A;outline-offset:6px}
+  .skip{position:absolute;top:-100px;right:16px;z-index:99;background:#171717;color:#F7F6F2;padding:14px 22px;font-size:15px}
+  .skip:focus{top:16px;color:#F7F6F2}
+  *,*::before,*::after{box-sizing:border-box}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  @media (max-width:1024px){
+    [data-two-col]{grid-template-columns:minmax(0,1fr)!important;gap:40px!important}
+    [data-process]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+    [data-team]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+    [data-dark-head]{grid-template-columns:minmax(0,1fr)!important;gap:24px!important;align-items:start!important}
+  }
+  @media (max-width:720px){
+    [data-process]{grid-template-columns:minmax(0,1fr)!important;gap:0!important}
+    [data-step]{padding:0 24px 40px 0!important}
+    [data-step] [data-line]{top:10px!important;bottom:0!important;right:3px!important;left:auto!important;width:1px!important;height:auto!important}
+    [data-step]:last-child{padding-bottom:0!important}
+    [data-step]:last-child [data-line]{display:none!important}
+    [data-step] [data-dot]{top:7px!important;right:0!important}
+    [data-rail]>a{flex:0 0 min(78vw,340px)!important}
+    [data-row]{grid-template-columns:minmax(0,1fr)!important;gap:8px!important}
+  }
+  @media (max-width:640px){
+    h1{letter-spacing:0!important}
+    .services h3,.philosophy h3,[data-step] h3,[data-member] h3,[data-rail] h3{font-size:20px!important;line-height:1.5!important}
+    p[style*="font-size:16px"],span[style*="font-size:16px"]{font-size:15px!important}
+    p[style*="font-size:13px"],span[style*="font-size:13px"],cite[style*="font-size:13px"]{font-size:12px!important}
+  }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","additionalType":"https://schema.org/Architect","name":"آبان سازه","alternateName":"Aban Sazeh Architecture Studio","slogan":"معماری برای امروز، ماندگار برای فردا","description":"استودیوی معماری و طراحی داخلی؛ طراحی، نظارت و اجرای پروژه‌های مسکونی، ویلایی، اداری و تجاری.","telephone":"+98-21-0000-0000","email":"studio@abansazeh.com","address":{"@type":"PostalAddress","addressLocality":"تهران","addressCountry":"IR","streetAddress":"خیابان نمونه، پلاک ۰۰"},"areaServed":"IR"}
+</script>
+</helmet>
+
+<div dir="rtl" lang="fa" style="font-family:Vazirmatn,sans-serif;background:#F7F6F2;color:#171717;overflow-x:hidden">
+
+  <a href="#main" class="skip">پرش به محتوای اصلی</a>
+  <dc-import name="Header" active="home" overlay="{{ true }}" style="position:absolute;top:0;right:0;left:0;height:0;z-index:250" hint-size="100%,88px"></dc-import>
+
+  <section id="main" class="hero" style="position:relative;min-height:min(100svh,900px);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#101923">
+    <div style="position:absolute;inset:0">
+      <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=2400&amp;q=80" alt="فضای داخلی یکپارچه با نور طبیعی، مصالح روشن و جداره چوبی در پروژه‌ای از آبان سازه" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div style="position:absolute;left:0;right:0;bottom:0;height:72%;background:linear-gradient(to top,rgba(16,25,35,.9) 0%,rgba(16,25,35,.74) 26%,rgba(16,25,35,.34) 62%,rgba(16,25,35,0) 100%);pointer-events:none"></div>
+
+    <div style="position:relative;width:100%;max-width:1440px;margin:0 auto;padding:clamp(104px,15vh,210px) clamp(34px,5.4vw,84px) clamp(28px,4vh,44px)">
+      <p style="margin:0 0 24px;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:rgba(247,246,242,.72)">Aban Sazeh — Architecture &amp; Interior Design</p>
+      <h1 style="margin:0;max-width:640px;font-size:clamp(38px,4.6vw,60px);font-weight:500;line-height:1.3;letter-spacing:-.008em;color:#F7F6F2;text-wrap:balance">معماری مینیمال و لوکس؛<br>فضاهایی که می‌مانند</h1>
+      <p style="margin:24px 0 0;max-width:48ch;font-size:clamp(15px,1.2vw,16px);line-height:1.9;color:rgba(247,246,242,.76)">از مفهوم تا اجرا، زیر نظر یک تیم واحد.</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:24px;margin-top:40px">
+        <a href="contact.dc.html" style="background:#F7F6F2;color:#171717;padding:18px 36px;font-size:16px;font-weight:500;white-space:nowrap;text-decoration:none;transition:background .35s ease,color .35s ease" style-hover="background:#8A6A4A;color:#F7F6F2">شروع پروژه</a>
+        <a href="projects.dc.html" style="color:rgba(247,246,242,.82);font-size:16px;white-space:nowrap;text-decoration:none;padding-bottom:8px;border-bottom:1px solid rgba(247,246,242,.3);transition:border-color .35s ease,color .35s ease" style-hover="border-color:rgba(247,246,242,.8);color:#F7F6F2">مشاهده پروژه‌ها</a>
+      </div>
+    </div>
+
+    <div style="position:relative;width:100%;max-width:1440px;margin:0 auto;padding:0 clamp(34px,5.4vw,84px) clamp(26px,3.4vh,40px)">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:clamp(16px,3vw,44px);padding-top:22px;border-top:1px solid rgba(247,246,242,.2);font-size:13px;letter-spacing:.02em;color:rgba(247,246,242,.74)">
+        <span>ویلای کرانه</span><span>لواسان</span><span>۱۴۰۳</span>
+        <span style="margin-inline-start:auto;display:flex;align-items:center;gap:11px">
+          <span style="display:block;width:1px;height:26px;background:rgba(247,246,242,.6);animation:abanCue 2.4s ease-in-out infinite"></span>اسکرول
+        </span>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section class="studio-intro" style="padding:clamp(64px,8vw,128px) clamp(24px,4vw,64px)">
+    <div style="max-width:1440px;margin:0 auto">
+      <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px">
+        <span style="font-family:Inter,sans-serif;font-size:13px;letter-spacing:.1em;color:#8A6A4A">۰۱</span>
+        <span style="flex:1;height:1px;background:rgba(23,23,23,.14)"></span>
+        <span style="font-size:13px;letter-spacing:.02em;color:#5A5650">استودیو</span>
+      </div>
+      <div data-two-col="" style="display:grid;grid-template-columns:minmax(0,40fr) minmax(0,48fr);gap:clamp(40px,5vw,96px);align-items:start">
+        <div data-reveal="">
+          <h2 style="margin:0;font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4;letter-spacing:-.004em;max-width:19ch;text-wrap:pretty">استودیویی که طراحی را یک اثر می‌داند، نه یک محصول</h2>
+          <p style="margin:32px 0 0;font-size:16px;line-height:1.9;color:#5A5650;max-width:50ch">آبان سازه در تقاطع معماری، طراحی داخلی و اجرای دقیق فعالیت می‌کند. هر پروژه با تحقیق درباره زمین، نور و شیوه زندگی کارفرما آغاز می‌شود و تا آخرین جزئیات اجرایی، زیر نظر همان تیمی که آن را طراحی کرده، پیش می‌رود.</p>
+          <p style="margin:24px 0 0;font-size:16px;line-height:1.9;color:#5A5650;max-width:50ch">تمایز ما در پیوستگی است: یک زبان طراحی واحد از کانسپت تا کارگاه، بدون واسطه و بدون افت کیفیت.</p>
+          <a href="services.dc.html" style="display:inline-block;margin-top:24px;font-size:16px;color:#171717;text-decoration:none;padding-bottom:8px;border-bottom:1px solid #8A6A4A;transition:color .35s ease" style-hover="color:#8A6A4A">آشنایی با خدمات</a>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:clamp(20px,3vw,44px);margin-top:clamp(38px,5vw,60px)">
+            <sc-for list="{{ stats }}" as="s" hint-placeholder-count="3">
+              <div style="border-top:1px solid rgba(23,23,23,.16);padding-top:20px">
+                <p style="margin:0;font-family:Inter,sans-serif;font-size:clamp(28px,3vw,40px);font-weight:300;color:#171717;letter-spacing:-.01em">{{ s.n }}</p>
+                <p style="margin:10px 0 0;font-size:16px;line-height:1.9;color:#5A5650">{{ s.t }}</p>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <div data-reveal="" style="position:relative">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1400&amp;q=80" alt="میز کار استودیوی معماری و ترسیم نقشه پلان" loading="lazy" style="width: 739px; aspect-ratio: 4/5; object-fit: cover; display: block; filter: grayscale(.2); height: 975px">
+          <p dir="ltr" style="margin:0;position:absolute;bottom:0;left:0;background:#F7F6F2;padding:24px 30px 0 0;max-width:78%;text-align:left;font-family:'Cormorant Garamond',serif;font-size:clamp(20px,1.9vw,29px);font-style:italic;line-height:1.5;color:#171717">Precision is not a detail.<br>It is the whole idea.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="philosophy" style="background:#E5E0D6;padding:clamp(64px,8vw,128px) clamp(24px,4vw,64px)">
+    <div style="max-width:1440px;margin:0 auto">
+      <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px">
+        <span style="font-family:Inter,sans-serif;font-size:13px;letter-spacing:.1em;color:#8A6A4A">۰۲</span>
+        <span style="flex:1;height:1px;background:rgba(23,23,23,.2)"></span>
+        <span style="font-size:13px;letter-spacing:.02em;color:#5A5650">فلسفه طراحی</span>
+      </div>
+      <blockquote data-reveal="" style="margin:0 0 clamp(64px,7vw,96px);max-width:900px">
+        <p style="margin:0;font-size:clamp(28px,4.4vw,56px);font-weight:500;line-height:1.4;letter-spacing:-.006em;color:#171717;text-wrap:balance">فضا آن چیزی است که پس از حذف هر چیز اضافه باقی می‌ماند.</p>
+        <cite style="display:block;margin-top:24px;font-size:13px;line-height:1.7;font-style:normal;color:#5A5650">بیانیهٔ استودیو — آبان سازه</cite>
+      </blockquote>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:clamp(24px,3vw,44px)">
+        <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="4">
+          <article data-reveal="" style="border-top:1px solid rgba(23,23,23,.22);padding-top:18px">
+            <p style="margin:0;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.16em;color:#8A6A4A">{{ p.num }}</p>
+            <h3 style="margin:14px 0 10px;font-size:20px;font-weight:500;line-height:1.5">{{ p.title }}</h3>
+            <p style="margin:0;font-size:16px;line-height:1.9;color:#5A5650;text-wrap:pretty">{{ p.text }}</p>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" style="padding:clamp(64px,8vw,128px) clamp(24px,4vw,64px)">
+    <div style="max-width:1440px;margin:0 auto">
+      <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px">
+        <span style="font-family:Inter,sans-serif;font-size:13px;letter-spacing:.1em;color:#8A6A4A">۰۳</span>
+        <span style="flex:1;height:1px;background:rgba(23,23,23,.14)"></span>
+        <span style="font-size:13px;letter-spacing:.02em;color:#5A5650">خدمات</span>
+      </div>
+      <div data-reveal="" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:clamp(40px,5vw,64px)">
+        <h2 style="margin:0;font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4;letter-spacing:-.004em;max-width:13ch">شش خدمت، یک زبان طراحی واحد</h2>
+        <p style="margin:0;flex:1 1 280px;max-width:42ch;font-size:16px;line-height:1.9;color:#5A5650">خدمات به‌صورت مستقل یا در قالب یک قرارداد یکپارچه از کانسپت تا تحویل ارائه می‌شوند.</p>
+        <a href="services.dc.html" style="font-size:15px;white-space:nowrap;color:#171717;border-bottom:1px solid #8A6A4A;padding-bottom:6px;text-decoration:none" style-hover="color:#8A6A4A">آشنایی با خدمات</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,3.4vw,56px)">
+        <sc-for list="{{ services }}" as="s" hint-placeholder-count="6">
+          <a href="services.dc.html#{{ s.slug }}" data-reveal="" style="display:block;text-decoration:none;color:inherit;border-top:1px solid rgba(23,23,23,.16);padding-top:24px;transition:border-color .35s ease" data-lift="">
+            <p style="margin:0;font-size:13px;line-height:1.7;color:#5A5650">{{ s.num }}</p>
+            <h3 style="margin:16px 0 8px;font-size:20px;font-weight:500;line-height:1.5;transition:color .35s ease">{{ s.title }}</h3>
+            <p style="margin:0;font-size:16px;line-height:1.9;color:#5A5650;max-width:34ch">{{ s.text }}</p>
+            <span data-arrow="" style="display:block;margin-top:24px;font-size:18px;line-height:1;color:#8A6A4A;transition:transform .35s ease" aria-hidden="true">←</span>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section class="blueprint" style="background:#101923;color:#F7F6F2;padding:clamp(64px,8vw,128px) clamp(24px,4vw,64px)">
+    <div style="max-width:1440px;margin:0 auto">
+      <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px">
+        <span style="font-family:Inter,sans-serif;font-size:13px;letter-spacing:.1em;color:#B0916F">۰۴</span>
+        <span style="flex:1;height:1px;background:rgba(247,246,242,.18)"></span>
+        <span style="font-size:13px;line-height:1.7;color:rgba(247,246,242,.72)">امضای طراحی</span>
+      </div>
+      <div data-dark-head="" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end;margin-bottom:clamp(40px,5vw,64px)">
+        <div data-reveal="" style="max-width:640px">
+          <h2 style="margin:0;font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4;letter-spacing:-.004em">از خط تا حجم؛ نقشه‌ای که به فضا تبدیل می‌شود</h2>
+          <p style="margin:24px 0 0;font-size:16px;line-height:1.9;color:rgba(247,246,242,.7);max-width:52ch">هر پروژه در آبان سازه با ترسیم آغاز می‌شود. پلان، مقطع و دیتیل پیش از هر تصویری وجود دارند؛ و ساختمان نهایی چیزی نیست جز همان خطوط که به مصالح ترجمه شده‌اند.</p>
+          <a href="project-details.dc.html?p=karaneh-villa" data-lift="" style="display:inline-block;margin-top:40px;font-size:16px;color:#F7F6F2;text-decoration:none;padding-bottom:8px;border-bottom:1px solid rgba(247,246,242,.34);transition:border-color .35s ease">مشاهده پروژه<span data-arrow="" style="display:inline-block;margin-inline-start:12px;transition:transform .35s ease" aria-hidden="true">←</span></a>
+        </div>
+        <p style="margin:0;font-family:Inter,sans-serif;font-size:13px;line-height:1.7;letter-spacing:.14em;color:rgba(247,246,242,.5);white-space:nowrap">01 / 06</p>
+      </div>
+      <figure data-blueprint="" style="margin:0;position:relative;width:100%;aspect-ratio:16/9;max-height:min(66vh,640px);background:#0B131C;border:1px solid rgba(247,246,242,.12);overflow:hidden">
+        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%" aria-label="پلان معماری ویلا">
+          <g stroke="#8A6A4A" stroke-width="1" fill="none" stroke-opacity=".26">
+            <path d="M0 60 H400"></path><path d="M0 150 H400"></path><path d="M0 240 H400"></path>
+            <path d="M80 0 V300"></path><path d="M200 0 V300"></path><path d="M320 0 V300"></path>
+          </g>
+          <g data-draw="" stroke="#F7F6F2" stroke-width="1.4" fill="none" stroke-linecap="square">
+            <rect x="40" y="40" width="320" height="220"></rect>
+            <path d="M40 150 H200"></path>
+            <path d="M200 40 V260"></path>
+            <path d="M200 190 H360"></path>
+            <path d="M270 190 V260"></path>
+            <path d="M100 40 V150"></path>
+            <rect x="230" y="70" width="60" height="42"></rect>
+            <path d="M40 100 H70"></path>
+            <path d="M320 40 V70"></path>
+            <path d="M120 260 H160"></path>
+          </g>
+        </svg>
+        <img data-reveal-img="" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=2000&amp;q=80" alt="نمای اجرا شده ویلای مسکونی؛ همان پلان در قالب حجم ساخته‌شده" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;clip-path:inset(0 0 100% 0);transition:opacity 1.1s ease .2s,clip-path 1.3s cubic-bezier(.2,.7,.2,1) .2s">
+        <figcaption style="position:absolute;bottom:16px;right:24px;font-size:13px;line-height:1.7;color:rgba(247,246,242,.78);z-index:2">ویلای کرانه — از نقشه به ساخت</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="projects" style="padding:clamp(64px,8vw,128px) 0 clamp(64px,8vw,96px)">
+    <div style="max-width:1440px;margin:0 auto;padding:0 clamp(24px,4vw,64px)">
+      <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px">
+        <span style="font-family:Inter,sans-serif;font-size:13px;letter-spacing:.16em;color:#8A6A4A">۰۵</span>
+        <span style="flex:1;height:1px;background:rgba(23,23,23,.22)"></span>
+        <span style="font-size:13px;letter-spacing:.02em;color:#5A5650">نمونه کارها</span>
+      </div>
+      <div data-reveal="" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:clamp(40px,5vw,64px)">
+        <h2 style="margin:0;font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4;letter-spacing:-.006em">پروژه‌های منتخب</h2>
+        <div style="display:flex;align-items:center;gap:12px">
+          <button type="button" onClick="{{ railPrev }}" aria-label="پروژه‌های قبلی" disabled="{{ atStart }}" style="opacity:{{ prevOpacity }};pointer-events:{{ prevEvents }};width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:none;border:1px solid rgba(23,23,23,.28);color:#171717;font-size:19px;line-height:1;cursor:pointer;transition:background .35s ease,color .35s ease,border-color .35s ease" style-hover="background:#171717;color:#F7F6F2;border-color:#171717">→</button>
+          <button type="button" onClick="{{ railNext }}" aria-label="پروژه‌های بعدی" disabled="{{ atEnd }}" style="opacity:{{ nextOpacity }};pointer-events:{{ nextEvents }};width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:none;border:1px solid rgba(23,23,23,.28);color:#171717;font-size:19px;line-height:1;cursor:pointer;transition:background .35s ease,color .35s ease,border-color .35s ease" style-hover="background:#171717;color:#F7F6F2;border-color:#171717">←</button>
+        </div>
+      </div>
+      <a href="project-details.dc.html?p={{ featured.slug }}" data-card="" data-reveal="" style="display:block;text-decoration:none;color:inherit;margin-bottom:clamp(64px,7vw,96px)">
+        <div style="overflow:hidden;background:#E5E0D6">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2000&amp;q=80" alt="فضای داخلی ویلای مینیمال با نور طبیعی و مصالح روشن" data-card-img="" style="width:100%;aspect-ratio:16/9;max-height:min(70vh,660px);object-fit:cover;display:block;transition:transform .45s cubic-bezier(.2,.7,.2,1)">
+        </div>
+        <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-top:24px;padding-top:24px;border-top:1px solid rgba(23,23,23,.16)">
+          <div>
+            <p style="margin:0;font-size:13px;line-height:1.7;color:#8A6A4A">پروژهٔ شاخص</p>
+            <h3 style="margin:16px 0 8px;font-size:clamp(24px,2.6vw,34px);font-weight:500;line-height:1.4;transition:color .35s ease">{{ featured.title }}</h3>
+            <p style="margin:0;font-size:16px;line-height:1.9;color:#5A5650">{{ featured.cat }} · {{ featured.place }} · {{ featured.year }}</p>
+          </div>
+          <span style="display:flex;align-items:center;gap:12px;font-size:16px;color:#171717">مشاهده پروژه<span data-arrow="" style="display:inline-block;color:#8A6A4A;transition:transform .35s ease" aria-hidden="true">←</span></span>
+        </div>
+      </a>
+    </div>
+    <div data-rail="" tabindex="0" role="region" aria-label="ریل پروژه‌های منتخب" style="display:flex;gap:clamp(16px,2vw,32px);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline-start:clamp(24px,4vw,64px);padding:0 clamp(24px,4vw,64px) 22px">
+      <sc-for list="{{ projects }}" as="p" hint-placeholder-count="5">
+        <a href="project-details.dc.html?p={{ p.slug }}" style="flex:0 0 clamp(272px,32vw,430px);scroll-snap-align:start;text-decoration:none;color:inherit;display:block" data-card="">
+          <div style="overflow:hidden;background:#E5E0D6">
+            <img src="{{ p.img }}" alt="{{ p.alt }}" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;transition:transform .45s cubic-bezier(.2,.7,.2,1)" data-card-img="">
+          </div>
+          <div style="margin-top:24px;padding-top:16px;border-top:1px solid rgba(23,23,23,.16)">
+            <h3 style="margin:0;font-size:20px;font-weight:500;line-height:1.5;transition:color .35s ease">{{ p.title }}</h3>
+            <p style="margin:8px 0 0;font-size:16px;line-height:1.9;color:#5A5650">{{ p.cat }}</p>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-top:16px">
+              <p style="margin:0;font-size:13px;line-height:1.7;color:#5A5650">{{ p.place }} · {{ p.year }}</p>
+              <span style="display:flex;align-items:center;gap:8px;font-size:13px;line-height:1.7;color:#8A6A4A;opacity:0;transition:opacity .35s ease" data-see="">مشاهده پروژه<span data-arrow="" style="display:inline-block;transition:transform .35s ease" aria-hidden="true">←</span></span>
+            </div>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+    <div style="max-width:1440px;margin:0 auto;padding:clamp(18px,2.4vw,32px) clamp(24px,4vw,64px) 0">
+      <a href="projects.dc.html" style="font-size:15px;color:#171717;border-bottom:1px solid #8A6A4A;padding-bottom:6px;text-decoration:none" style-hover="color:#8A6A4A">مشاهده پروژه‌ها</a>
+    </div>
+  </section>
+
+  <section class="process" style="padding:clamp(64px,8vw,128px) clamp(24px,4vw,64px)">
+    <div style="max-width:1440px;margin:0 auto">
+      <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px">
+        <span style="font-family:Inter,sans-serif;font-size:13px;letter-spacing:.1em;color:#8A6A4A">۰۶</span>
+        <span style="flex:1;height:1px;background:rgba(23,23,23,.14)"></span>
+        <span style="font-size:13px;letter-spacing:.02em;color:#5A5650">فرآیند</span>
+      </div>
+      <h2 data-reveal="" style="margin:0 0 clamp(40px,5vw,64px);font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4;letter-spacing:-.004em;max-width:20ch">از کانسپت تا ساخت</h2>
+      <ol data-process="" style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(24px,3vw,40px)">
+        <sc-for list="{{ process }}" as="p" hint-placeholder-count="4">
+          <li data-reveal="" data-step="" style="position:relative;padding-top:40px">
+            <span data-line="" style="position:absolute;top:7px;right:0;left:0;height:1px;background:rgba(23,23,23,.14)" aria-hidden="true"></span>
+            <span data-dot="" style="position:absolute;top:4px;right:0;width:7px;height:7px;border-radius:50%;background:#8A6A4A" aria-hidden="true"></span>
+            <p style="margin:0;font-family:Inter,sans-serif;font-size:13px;line-height:1.7;letter-spacing:.12em;color:#8A6A4A">{{ p.num }}</p>
+            <h3 style="margin:16px 0 8px;font-size:20px;font-weight:500;line-height:1.5">{{ p.title }}</h3>
+            <p style="margin:0;font-size:16px;line-height:1.9;color:#5A5650;max-width:28ch">{{ p.text }}</p>
+          </li>
+        </sc-for>
+      </ol>
+    </div>
+  </section>
+
+  <section class="team" style="padding:0 clamp(24px,4vw,64px) clamp(64px,8vw,128px)">
+    <div style="max-width:1440px;margin:0 auto">
+      <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px">
+        <span style="font-family:Inter,sans-serif;font-size:13px;letter-spacing:.1em;color:#8A6A4A">۰۷</span>
+        <span style="flex:1;height:1px;background:rgba(23,23,23,.14)"></span>
+        <span style="font-size:13px;letter-spacing:.02em;color:#5A5650">افراد</span>
+      </div>
+      <h2 data-reveal="" style="margin:0 0 24px;font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4;letter-spacing:-.004em">تیم معماران</h2>
+      <p data-internal-note="" style="margin:0 0 clamp(40px,5vw,64px);padding:12px 16px;border:1px dashed rgba(138,106,74,.5);font-size:13px;line-height:1.7;color:#8A6A4A;max-width:72ch">یادداشت داخلی — پرتره‌ها و اسامی این بخش placeholder هستند و باید پیش از انتشار نهایی با عکس و نام واقعی اعضای تیم جایگزین شوند. این یادداشت را قبل از publish حذف کنید.</p>
+      <div data-team="" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(24px,2.6vw,40px)">
+        <sc-for list="{{ team }}" as="t" hint-placeholder-count="4">
+          <article data-reveal="" data-member="">
+            <div style="position:relative;aspect-ratio:3/4;overflow:hidden;background:repeating-linear-gradient(135deg,#EDEAE4 0 9px,#E5E0D6 9px 18px)">
+              <span data-portrait="" style="position:absolute;inset:0;display:flex;align-items:flex-end;padding:16px;font-size:13px;line-height:1.7;color:#5A5650;transition:transform .45s cubic-bezier(.2,.7,.2,1)">{{ t.slot }}</span>
+            </div>
+            <h3 style="margin:24px 0 8px;font-size:20px;font-weight:500;line-height:1.5;transition:color .35s ease">{{ t.name }}</h3>
+            <p style="margin:0;font-size:16px;line-height:1.9;color:#5A5650">{{ t.role }}</p>
+            <p style="margin:8px 0 0;font-size:13px;line-height:1.7;color:#5A5650">{{ t.focus }}</p>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section class="awards" style="padding:0 clamp(24px,4vw,64px) clamp(64px,8vw,128px)">
+    <div style="max-width:1440px;margin:0 auto">
+      <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px">
+        <span style="font-family:Inter,sans-serif;font-size:13px;letter-spacing:.1em;color:#8A6A4A">۰۸</span>
+        <span style="flex:1;height:1px;background:rgba(23,23,23,.14)"></span>
+        <span style="font-size:13px;letter-spacing:.02em;color:#5A5650">اعتبار</span>
+      </div>
+      <h2 data-reveal="" style="margin:0 0 clamp(40px,5vw,64px);font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4;letter-spacing:-.004em">جوایز و حضورها</h2>
+      <ul style="list-style:none;margin:0;padding:0;border-top:1px solid rgba(23,23,23,.08)">
+        <sc-for list="{{ awards }}" as="a" hint-placeholder-count="5">
+          <li data-reveal="" data-row="" style="display:grid;grid-template-columns:minmax(96px,auto) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:baseline;padding:24px 0;border-bottom:1px solid rgba(23,23,23,.08);transition:padding-inline .4s ease,background .4s ease">
+            <span style="font-family:Inter,sans-serif;font-size:clamp(20px,1.9vw,26px);font-weight:300;line-height:1.3;color:#171717">{{ a.year }}</span>
+            <span style="display:block">
+              <span style="display:block;font-size:20px;font-weight:500;line-height:1.5">{{ a.title }}</span>
+              <span style="display:block;margin-top:8px;font-size:16px;line-height:1.9;color:#5A5650;max-width:56ch">{{ a.text }}</span>
+            </span>
+          </li>
+        </sc-for>
+      </ul>
+    </div>
+  </section>
+
+  <section class="testimonials" style="background:#E5E0D6;padding:clamp(64px,8vw,128px) clamp(24px,4vw,64px)">
+    <div style="max-width:1440px;margin:0 auto">
+      <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;margin-bottom:40px">
+        <span style="font-family:Inter,sans-serif;font-size:13px;letter-spacing:.1em;color:#8A6A4A">۰۹</span>
+        <span style="flex:1;height:1px;background:rgba(23,23,23,.2)"></span>
+        <span style="font-size:13px;letter-spacing:.02em;color:#5A5650">کارفرمایان</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:clamp(24px,3vw,44px)">
+        <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="3">
+          <figure data-reveal="" style="margin:0;border-top:1px solid rgba(23,23,23,.22);padding-top:26px">
+            <blockquote style="margin:0;font-size:16px;line-height:1.9;color:#171717">{{ t.quote }}</blockquote>
+            <figcaption style="margin-top:26px;font-size:14px;letter-spacing:.02em;color:#5A5650">{{ t.by }}</figcaption>
+          </figure>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" style="padding:clamp(96px,10vw,128px) clamp(24px,4vw,64px)">
+    <div data-reveal="" style="max-width:1440px;margin:0 auto">
+      <p style="margin:0 0 24px;font-family:Inter,sans-serif;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:#8A6A4A">Start a project</p>
+      <h2 style="margin:0;max-width:640px;font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4;letter-spacing:-.008em;text-wrap:balance">برای شروع یک پروژه ماندگار آماده‌اید؟</h2>
+      <p style="margin:24px 0 0;max-width:52ch;font-size:16px;line-height:1.9;color:#5A5650">جلسه مشاوره اولیه برای بررسی زمین، برنامه فیزیکی و بودجه پروژه — بدون هزینه.</p>
+      <a href="contact.dc.html" data-lift="" style="display:inline-block;margin-top:40px;background:#171717;color:#F7F6F2;padding:18px 40px;font-size:16px;font-weight:500;text-decoration:none;transition:background .35s ease" style-hover="background:#8A6A4A;color:#F7F6F2">شروع پروژه</a>
+    </div>
+  </section>
+
+  <button type="button" onClick="{{ toTop }}" aria-label="بازگشت به بالای صفحه" style="position:fixed;bottom:26px;left:26px;z-index:150;width:50px;height:50px;display:flex;align-items:center;justify-content:center;background:#171717;color:#F7F6F2;border:none;cursor:pointer;font-size:17px;line-height:1;opacity:{{ topOpacity }};pointer-events:{{ topEvents }};transition:opacity .4s ease,background .35s ease" style-hover="background:#8A6A4A">↑</button>
+  <dc-import name="Footer" hint-size="100%,460px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { showTop: false, atStart: true, atEnd: false };
+
+  _syncRail() {
+    const rail = document.querySelector('[data-rail]');
+    if (!rail) return;
+    const max = rail.scrollWidth - rail.clientWidth;
+    const pos = Math.abs(rail.scrollLeft);
+    const atStart = pos <= 4;
+    const atEnd = pos >= max - 4;
+    if (atStart !== this.state.atStart || atEnd !== this.state.atEnd) this.setState({ atStart, atEnd });
+  }
+
+  _railStep(dir) {
+    const rail = document.querySelector('[data-rail]');
+    if (!rail) return;
+    const card = rail.firstElementChild;
+    const gap = parseFloat(getComputedStyle(rail).columnGap || '24') || 24;
+    const step = (card ? card.getBoundingClientRect().width : 340) + gap;
+    rail.scrollBy({ left: dir * step, behavior: 'smooth' });
+  }
+
+  componentDidMount() {
+    this._onTopScroll = () => {
+      const v = window.scrollY > window.innerHeight * 1.2;
+      if (v !== this.state.showTop) this.setState({ showTop: v });
+    };
+    window.addEventListener('scroll', this._onTopScroll, { passive: true });
+    this._onTopScroll();
+    const rail = document.querySelector('[data-rail]');
+    if (rail) {
+      this._onRail = () => this._syncRail();
+      rail.addEventListener('scroll', this._onRail, { passive: true });
+      this._rail = rail;
+      setTimeout(this._onRail, 300);
+    }
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const nodes = Array.from(document.querySelectorAll('[data-reveal]'));
+    const show = n => { n.style.opacity = '1'; n.style.transform = 'none'; };
+
+    if (reduce || typeof IntersectionObserver === 'undefined') { nodes.forEach(show); } else {
+      nodes.forEach((n, i) => {
+        n.style.opacity = '0';
+        n.style.transform = 'translateY(16px)';
+        n.style.transition = 'opacity .7s cubic-bezier(.2,.7,.2,1) ' + ((i % 4) * 0.06) + 's, transform .7s cubic-bezier(.2,.7,.2,1) ' + ((i % 4) * 0.06) + 's';
+      });
+      const io = new IntersectionObserver(es => {
+        es.forEach(e => { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      nodes.forEach(n => io.observe(n));
+      this._io = io;
+      requestAnimationFrame(() => nodes.forEach(n => {
+        const r = n.getBoundingClientRect();
+        if (r.top < window.innerHeight * 1.1) show(n);
+      }));
+      this._safety = setTimeout(() => nodes.forEach(n => {
+        const r = n.getBoundingClientRect();
+        if (r.top < window.innerHeight) show(n);
+      }), 1200);
+    }
+
+    const bp = document.querySelector('[data-blueprint]');
+    if (bp) {
+      const paths = Array.from(bp.querySelectorAll('[data-draw] > *'));
+      const img = bp.querySelector('[data-reveal-img]');
+      if (reduce) { if (img) { img.style.opacity = '1'; img.style.clipPath = 'inset(0 0 0% 0)'; } }
+      else {
+        paths.forEach(p => {
+          const len = p.getTotalLength ? p.getTotalLength() : 400;
+          p.style.strokeDasharray = len;
+          p.style.strokeDashoffset = len;
+          p.style.transition = 'stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1)';
+        });
+        const bio = new IntersectionObserver(es => es.forEach(e => {
+          if (!e.isIntersecting) return;
+          bio.disconnect();
+          paths.forEach((p, i) => setTimeout(() => { p.style.strokeDashoffset = 0; }, i * 130));
+          setTimeout(() => { if (img) { img.style.opacity = '1'; img.style.clipPath = 'inset(0 0 0% 0)'; } }, paths.length * 130 + 700);
+        }), { threshold: 0.35 });
+        bio.observe(bp);
+        this._bio = bio;
+      }
+    }
+
+    if (!reduce) {
+      document.querySelectorAll('[data-card]').forEach(c => {
+        const im = c.querySelector('[data-card-img]');
+        const see = c.querySelector('[data-see]');
+        const ar = c.querySelector('[data-arrow]');
+        const h3 = c.querySelector('h3');
+        const on = () => {
+          if (im) im.style.transform = 'scale(1.03)';
+          if (see) see.style.opacity = '1';
+          if (ar) ar.style.transform = 'translateX(-8px)';
+          if (h3) h3.style.color = '#8A6A4A';
+        };
+        const off = () => {
+          if (im) im.style.transform = 'none';
+          if (see) see.style.opacity = '0';
+          if (ar) ar.style.transform = 'none';
+          if (h3) h3.style.color = '#171717';
+        };
+        c.addEventListener('mouseenter', on);
+        c.addEventListener('mouseleave', off);
+        c.addEventListener('focusin', on);
+        c.addEventListener('focusout', off);
+      });
+      document.querySelectorAll('[data-lift]').forEach(c => {
+        const h3 = c.querySelector('h3');
+        const ar = c.querySelector('[data-arrow]');
+        c.addEventListener('mouseenter', () => {
+          if (h3) h3.style.color = '#8A6A4A';
+          if (ar) ar.style.transform = 'translateX(-8px)';
+          c.style.borderTopColor = 'rgba(138,106,74,.55)';
+        });
+        c.addEventListener('mouseleave', () => {
+          if (h3) h3.style.color = '#171717';
+          if (ar) ar.style.transform = 'none';
+          c.style.borderTopColor = 'rgba(23,23,23,.16)';
+        });
+      });
+      document.querySelectorAll('[data-member]').forEach(m => {
+        const ph = m.querySelector('[data-portrait]');
+        const h3 = m.querySelector('h3');
+        m.addEventListener('mouseenter', () => {
+          if (ph) ph.style.transform = 'scale(1.03)';
+          if (h3) h3.style.color = '#8A6A4A';
+        });
+        m.addEventListener('mouseleave', () => {
+          if (ph) ph.style.transform = 'none';
+          if (h3) h3.style.color = '#171717';
+        });
+      });
+      document.querySelectorAll('[data-row]').forEach(r => {
+        r.addEventListener('mouseenter', () => { r.style.paddingInline = '12px'; r.style.background = 'rgba(23,23,23,.025)'; });
+        r.addEventListener('mouseleave', () => { r.style.paddingInline = '0'; r.style.background = 'transparent'; });
+      });
+    }
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._bio) this._bio.disconnect();
+    if (this._safety) clearTimeout(this._safety);
+    if (this._onTopScroll) window.removeEventListener('scroll', this._onTopScroll);
+    if (this._rail && this._onRail) this._rail.removeEventListener('scroll', this._onRail);
+  }
+
+  _res(id, url) { const r = window.__resources; return (r && (r[id] || r[url])) || url; }
+
+  renderVals() {
+    return {
+      railNext: () => { this._railStep(-1); setTimeout(() => this._syncRail(), 600); },
+      railPrev: () => { this._railStep(1); setTimeout(() => this._syncRail(), 600); },
+      atStart: this.state.atStart,
+      atEnd: this.state.atEnd,
+      prevOpacity: this.state.atStart ? 0.35 : 1,
+      nextOpacity: this.state.atEnd ? 0.35 : 1,
+      prevEvents: this.state.atStart ? 'none' : 'auto',
+      nextEvents: this.state.atEnd ? 'none' : 'auto',
+      toTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
+      topOpacity: this.state.showTop ? 1 : 0,
+      topEvents: this.state.showTop ? 'auto' : 'none',
+      stats: [
+        { n: '۱۲', t: 'سال تجربه طراحی و اجرا' },
+        { n: '۸۰', t: 'پروژه تکمیل‌شده و در حال اجرا' },
+        { n: '۵', t: 'فاز کنترل‌شده در هر پروژه' }
+      ],
+      pillars: [
+        { num: '۰۱', title: 'هنر', text: 'هر پروژه یک موضع طراحی دارد؛ نه تکرار یک سبک، بلکه پاسخی یکتا به زمین و زندگی.' },
+        { num: '۰۲', title: 'سادگی', text: 'حذف تا جایی که هیچ عنصر اضافه‌ای نماند و آنچه می‌ماند، ضروری و آرام باشد.' },
+        { num: '۰۳', title: 'جزئیات', text: 'اتصال مصالح، لبه‌ها و نور غیرمستقیم؛ کیفیت پروژه در همین سانتی‌مترها تعیین می‌شود.' },
+        { num: '۰۴', title: 'ماندگاری', text: 'انتخاب مصالحی که با گذشت زمان بهتر می‌شوند و طراحی‌ای که از مد نمی‌افتد.' }
+      ],
+      services: [
+        { slug: 'architecture', num: '۰۱', title: 'طراحی معماری', text: 'از تحلیل زمین و ضوابط تا کانسپت، حجم و مدارک کامل فاز دو.' },
+        { slug: 'interior', num: '۰۲', title: 'طراحی داخلی', text: 'چیدمان، نور، مصالح و مبلمان؛ فضایی که با شیوه زندگی کارفرما هماهنگ است.' },
+        { slug: 'supervision', num: '۰۳', title: 'نظارت', text: 'کنترل کیفی مستمر کارگاه، تطبیق اجرا با نقشه و مدیریت تغییرات.' },
+        { slug: 'construction', num: '۰۴', title: 'اجرا', text: 'اجرای پروژه با تیم داخلی و پیمانکاران منتخب، با زمان‌بندی و بودجه شفاف.' },
+        { slug: 'villa', num: '۰۵', title: 'طراحی ویلای لوکس', text: 'ویلاهایی با پیوند دقیق میان منظر، اقلیم و فضاهای خصوصی.' },
+        { slug: 'renovation', num: '۰۶', title: 'بازسازی و نوسازی', text: 'بازتعریف فضاهای موجود با کمترین تخریب و بیشترین تأثیر.' }
+      ],
+      featured: { slug: 'karaneh-villa', title: 'ویلای کرانه', cat: 'ویلایی · ۴۲۰ متر مربع', place: 'لواسان', year: '۱۴۰۳', img: this._res('featured', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2000&q=80'), alt: 'فضای داخلی ویلای مینیمال با نور طبیعی و مصالح روشن' },
+      projects: [
+        { slug: 'brick-shadow-house', title: 'خانه آجر و سایه', cat: 'مسکونی · ۳۱۰ متر مربع', place: 'تهران', year: '۱۴۰۲', img: this._res('proj1', 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=1200&q=80'), alt: 'نمای شب خانه مسکونی با ترکیب آجر و شیشه' },
+        { slug: 'north-light-studio', title: 'استودیو نور شمالی', cat: 'اداری · ۶۵۰ متر مربع', place: 'تهران', year: '۱۴۰۳', img: this._res('proj2', 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80'), alt: 'فضای اداری مینیمال با نور طبیعی و پارتیشن شیشه‌ای' },
+        { slug: 'white-courtyard-villa', title: 'ویلای حیاط سفید', cat: 'ویلایی · ۵۸۰ متر مربع', place: 'نور', year: '۱۴۰۱', img: this._res('proj3', 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80'), alt: 'ویلای سفید با حیاط و استخر و احجام ساده' },
+        { slug: 'second-floor-renovation', title: 'بازسازی طبقه دوم', cat: 'بازسازی · ۱۸۰ متر مربع', place: 'تهران', year: '۱۴۰۴', img: this._res('proj4', 'https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=1200&q=80'), alt: 'نشیمن بازسازی‌شده با مبلمان مینیمال و رنگ‌های خنثی' },
+        { slug: 'aban-commercial-gallery', title: 'گالری تجاری آبان', cat: 'تجاری · ۹۴۰ متر مربع', place: 'اصفهان', year: '۱۴۰۲', img: this._res('proj5', 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200&q=80'), alt: 'نمای بیرونی ساختمان تجاری مدرن با خطوط هندسی' }
+      ],
+      process: [
+        { num: '۰۱', title: 'شناخت', text: 'بررسی زمین، ضوابط، برنامه فیزیکی و بودجه.' },
+        { num: '۰۲', title: 'کانسپت', text: 'اسکیس، دیاگرام و تعیین موضع طراحی پروژه.' },
+        { num: '۰۳', title: 'طراحی', text: 'پلان و حجم تا مدارک اجرایی و دیتیل.' },
+        { num: '۰۴', title: 'اجرا و نظارت', text: 'کنترل کیفی کارگاه تا تحویل نهایی.' }
+      ],
+      team: [
+        { name: 'نام عضو تیم', role: 'معمار ارشد و مدیر طراحی', focus: 'کانسپت، حجم و زبان معماری پروژه‌ها', slot: 'جای پرترهٔ معمار ارشد' },
+        { name: 'نام عضو تیم', role: 'طراح ارشد داخلی', focus: 'نور، مصالح، مبلمان و اتمسفر فضا', slot: 'جای پرترهٔ طراح داخلی' },
+        { name: 'نام عضو تیم', role: 'مدیر فنی و نظارت', focus: 'کنترل کیفی اجرا و مدارک کارگاهی', slot: 'جای پرترهٔ مدیر فنی' },
+        { name: 'نام عضو تیم', role: 'مدیر پروژه', focus: 'زمان‌بندی، بودجه و هماهنگی پیمانکاران', slot: 'جای پرترهٔ مدیر پروژه' }
+      ],
+      awards: [
+        { year: '۱۴۰۴', title: 'نامزد جایزه معمار — بخش معماری مسکونی', text: 'ویلای کرانه، لواسان؛ راه‌یافته به مرحله نهایی داوری.' },
+        { year: '۱۴۰۳', title: 'نمایشگاه سالانه معماری معاصر', text: 'ارائه دو پروژه مسکونی و یک پروژه اداری در بخش استودیوها.' },
+        { year: '۱۴۰۳', title: 'انتشار در نشریه تخصصی معماری', text: 'پرونده هشت‌صفحه‌ای ویلای کرانه با نقشه‌ها و عکس‌های اجرا.' },
+        { year: '۱۴۰۲', title: 'تقدیر در بخش طراحی داخلی اداری', text: 'استودیو نور شمالی؛ برای کیفیت نورپردازی و مصالح.' },
+        { year: '۱۴۰۱', title: 'گفت‌وگوهای معماری ایران', text: 'معرفی رویکرد استودیو در مجموعه گفت‌وگوهای تخصصی.' }
+      ],
+      testimonials: [
+        { quote: 'دقت تیم در مرحله مدارک اجرایی باعث شد کارگاه بدون توقف پیش برود. کیفیت تحویل با آنچه در نقشه دیده بودیم یکی بود.', by: 'کارفرمای پروژه مسکونی — تهران' },
+        { quote: 'انتخاب مصالح و نورپردازی دفتر مرکزی ما را از یک فضای اداری معمولی به یک محیط کاری آرام تبدیل کرد.', by: 'مدیر اداری — شرکت بازرگانی' },
+        { quote: 'از کانسپت تا تحویل، یک تیم واحد پاسخگو بود. همین پیوستگی مهم‌ترین دلیل ادامه همکاری ما در پروژه دوم است.', by: 'سازنده و انبوه‌ساز — لواسان' }
+      ]
+    };
+  }
+}
+
+</script>
+</body>
+</html>

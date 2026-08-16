@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>پروژه‌ها | نمونه کارهای معماری و طراحی داخلی آبان سازه</title>
+<meta name="description" content="نمونه کار معماری آبان سازه؛ پروژه‌های مسکونی، ویلایی، اداری و تجاری تکمیل‌شده و در حال اجرا با متراژ، موقعیت و سال اجرا.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Vazirmatn:wght@100..900&display=swap">
+<style>
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#F7F6F2;color:#171717}
+  a{color:#8A6A4A;text-decoration:none}
+  a:hover{color:#171717}
+  ::selection{background:#E5E0D6;color:#171717}
+  [data-rail]::-webkit-scrollbar{height:2px}
+  [data-rail]::-webkit-scrollbar-thumb{background:rgba(23,23,23,.25)}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+
+<div dir="rtl" lang="fa" style="font-family:Vazirmatn,sans-serif;background:#F7F6F2;color:#171717;overflow-x:hidden">
+  <dc-import name="Header" active="projects" style="position:absolute;top:0;right:0;left:0;height:0;z-index:250" hint-size="100%,92px"></dc-import>
+
+  <section class="page-hero" style="padding:clamp(122px,12vw,158px) clamp(24px,4vw,64px) clamp(36px,5vw,64px)">
+    <div style="max-width:1440px;margin:0 auto">
+      <nav aria-label="مسیر صفحه" style="font-family:Inter,sans-serif;font-size:12px;letter-spacing:.2em;color:#9aa0a8;margin-bottom:36px"><a href="index.dc.html" style="color:#9aa0a8">HOME</a> &nbsp;/&nbsp; <span style="color:#8A6A4A">PROJECTS</span></nav>
+      <h1 style="margin:0;font-size:clamp(38px,4.6vw,60px);font-weight:500;line-height:1.3">پروژه‌ها</h1>
+      <p style="margin:30px 0 0;max-width:56ch;font-size:17px;line-height:2.15;color:#5A5650">مجموعه‌ای منتخب از پروژه‌های مسکونی، ویلایی، اداری و تجاری استودیو؛ از کانسپت تا اجرا.</p>
+    </div>
+  </section>
+
+  <section class="filters" style="padding:0 clamp(24px,4vw,64px) clamp(28px,4vw,48px);position:sticky;top:68px;z-index:50;background:#F7F6F2">
+    <div style="max-width:1440px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px;padding-top:18px;border-bottom:1px solid rgba(23,23,23,.1);padding-bottom:20px">
+      <sc-for list="{{ filters }}" as="f" hint-placeholder-count="7">
+        <button type="button" onClick="{{ f.pick }}" style="font-family:inherit;font-size:14px;padding:9px 20px;border-radius:999px;cursor:pointer;white-space:nowrap;border:1px solid {{ f.border }};background:{{ f.bg }};color:{{ f.color }};transition:all .3s ease">{{ f.label }}</button>
+      </sc-for>
+      <span style="margin-inline-start:auto;align-self:center;font-family:Vazirmatn,sans-serif;font-size:13px;color:#9aa0a8">{{ countLabel }}</span>
+    </div>
+  </section>
+
+  <section class="grid" style="padding:0 clamp(24px,4vw,64px) clamp(46px,5.6vw,84px)">
+    <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:clamp(24px,3vw,48px)">
+      <sc-for list="{{ shown }}" as="p" hint-placeholder-count="6">
+        <a href="project-details.dc.html?p={{ p.slug }}" data-card style="display:block;text-decoration:none;color:inherit">
+          <figure data-plan style="margin:0;position:relative;overflow:hidden;background:#E5E0D6;aspect-ratio:4/3">
+            <img data-plan-img src="{{ p.img }}" alt="{{ p.alt }}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)">
+            <div data-plan-overlay style="position:absolute;inset:0;background:rgba(17,26,36,.9);opacity:0;transition:opacity .55s ease">
+              <svg viewBox="0 0 400 300" style="position:absolute;inset:0;width:100%;height:100%" aria-hidden="true">
+                <g stroke="#8A6A4A" stroke-width="1" fill="none" stroke-opacity=".3">
+                  <path d="M0 100 H400"></path><path d="M0 200 H400"></path><path d="M133 0 V300"></path><path d="M266 0 V300"></path>
+                </g>
+                <g data-draw stroke="#F7F6F2" stroke-width="1.5" fill="none" stroke-linecap="square">
+                  <rect x="34" y="34" width="332" height="232"></rect>
+                  <path d="M34 160 H210"></path>
+                  <path d="M210 34 V266"></path>
+                  <path d="M210 200 H366"></path>
+                  <path d="M290 200 V266"></path>
+                  <rect x="240" y="66" width="66" height="46"></rect>
+                  <path d="M110 266 V220"></path>
+                </g>
+              </svg>
+              <span style="position:absolute;bottom:14px;right:16px;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.2em;color:rgba(247,246,242,.6)">VIEW PLAN →</span>
+            </div>
+            <figcaption style="position:absolute;top:14px;right:16px;z-index:2;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.18em;color:{{ p.tagColor }};background:{{ p.tagBg }};padding:6px 12px">{{ p.status }}</figcaption>
+          </figure>
+          <div style="display:flex;justify-content:space-between;gap:16px;margin-top:20px;padding-top:16px;border-top:1px solid rgba(23,23,23,.14)">
+            <div>
+              <h2 style="margin:0;font-size:20px;font-weight:500;line-height:1.5">{{ p.title }}</h2>
+              <p style="margin:9px 0 0;font-size:13px;line-height:1.9;color:#5A5650">{{ p.meta }}</p>
+            </div>
+            <p style="margin:0;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.14em;color:#5A5650">{{ p.year }}</p>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <section class="editorial-rail" style="background:#101923;color:#F7F6F2;padding:clamp(52px,6.2vw,94px) 0">
+    <div style="max-width:1440px;margin:0 auto;padding:0 clamp(24px,4vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:clamp(28px,4vw,48px)">
+      <div>
+        <h2 style="margin:0;font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4;white-space:nowrap">قاب‌های منتخب</h2>
+      </div>
+      <p style="margin:0;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.2em;white-space:nowrap;color:rgba(247,246,242,.45)">← SCROLL</p>
+    </div>
+    <div data-rail style="display:flex;gap:clamp(14px,1.6vw,24px);overflow-x:auto;scroll-snap-type:x mandatory;padding:0 clamp(24px,4vw,64px) 24px">
+      <sc-for list="{{ rail }}" as="r" hint-placeholder-count="5">
+        <figure style="margin:0;flex:0 0 clamp(260px,30vw,420px);scroll-snap-align:start">
+          <img src="{{ r.img }}" alt="{{ r.alt }}" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block">
+          <figcaption style="margin-top:14px;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.16em;color:rgba(247,246,242,.5)">{{ r.cap }}</figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </section>
+
+  <section class="cta" style="padding:clamp(64px,8vw,128px) clamp(24px,4vw,64px);text-align:center">
+    <h2 style="margin:0;font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.4;text-wrap:balance">پروژه بعدی می‌تواند مال شما باشد</h2>
+    <div style="margin-top:40px"><a href="contact.dc.html" style="background:#171717;color:#F7F6F2;padding:18px 42px;font-size:16px;text-decoration:none" style-hover="background:#8A6A4A;color:#F7F6F2">شروع پروژه</a></div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,460px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { filter: 'all' };
+
+  componentDidUpdate() { this.wirePlans(); }
+  componentDidMount() { this.wirePlans(); }
+
+  wirePlans() {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+    document.querySelectorAll('[data-plan]').forEach(fig => {
+      if (fig._wired) return;
+      fig._wired = true;
+      const img = fig.querySelector('[data-plan-img]');
+      const overlay = fig.querySelector('[data-plan-overlay]');
+      const paths = Array.from(fig.querySelectorAll('[data-draw] > *'));
+      paths.forEach(p => {
+        const len = p.getTotalLength ? p.getTotalLength() : 400;
+        p.style.strokeDasharray = len;
+        p.style.strokeDashoffset = len;
+        p.style.transition = 'stroke-dashoffset .9s cubic-bezier(.4,0,.2,1)';
+      });
+      const card = fig.closest('[data-card]');
+      if (!card) return;
+      card.addEventListener('mouseenter', () => {
+        if (img) img.style.transform = 'scale(1.04)';
+        if (overlay) overlay.style.opacity = '1';
+        paths.forEach((p, i) => {
+          p._t = setTimeout(() => { p.style.strokeDashoffset = 0; }, i * 70);
+        });
+      });
+      card.addEventListener('mouseleave', () => {
+        if (img) img.style.transform = 'none';
+        if (overlay) overlay.style.opacity = '0';
+        paths.forEach(p => {
+          clearTimeout(p._t);
+          setTimeout(() => { p.style.strokeDashoffset = p.style.strokeDasharray; }, 420);
+        });
+      });
+    });
+  }
+
+  renderVals() {
+    const all = [
+      { title: 'ویلای کرانه', slug: 'karaneh-villa', cat: 'villa', status: 'تکمیل‌شده', done: true, area: '۴۲۰', loc: 'لواسان', year: '۱۴۰۳', img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80', alt: 'فضای داخلی ویلای مینیمال با نور طبیعی و مصالح روشن، لواسان' },
+      { title: 'خانه آجر و سایه', slug: 'brick-shadow-house', cat: 'residential', status: 'تکمیل‌شده', done: true, area: '۳۱۰', loc: 'تهران', year: '۱۴۰۲', img: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=1200&q=80', alt: 'نمای شب خانه مسکونی با ترکیب آجر و شیشه، تهران' },
+      { title: 'استودیو نور شمالی', slug: 'north-light-studio', cat: 'office', status: 'تکمیل‌شده', done: true, area: '۶۵۰', loc: 'تهران', year: '۱۴۰۳', img: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80', alt: 'فضای اداری مینیمال با نور طبیعی و پارتیشن شیشه‌ای' },
+      { title: 'ویلای حیاط سفید', slug: 'white-courtyard-villa', cat: 'villa', status: 'تکمیل‌شده', done: true, area: '۵۸۰', loc: 'نور', year: '۱۴۰۱', img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80', alt: 'ویلای سفید با حیاط و استخر و احجام ساده، نور' },
+      { title: 'بازسازی طبقه دوم', slug: 'second-floor-renovation', cat: 'residential', status: 'در حال اجرا', done: false, area: '۱۸۰', loc: 'تهران', year: '۱۴۰۴', img: 'https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=1200&q=80', alt: 'نشیمن بازسازی‌شده با مبلمان مینیمال و رنگ‌های خنثی' },
+      { title: 'گالری تجاری آبان', slug: 'aban-commercial-gallery', cat: 'commercial', status: 'تکمیل‌شده', done: true, area: '۹۴۰', loc: 'اصفهان', year: '۱۴۰۲', img: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200&q=80', alt: 'نمای بیرونی ساختمان تجاری مدرن با خطوط هندسی، اصفهان' },
+      { title: 'خانه پلکان', slug: 'stair-house', cat: 'residential', status: 'در حال اجرا', done: false, area: '۲۴۰', loc: 'کرج', year: '۱۴۰۴', img: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80', alt: 'راه‌پله چوبی و فضای دوبلکس در خانه مسکونی' },
+      { title: 'دفتر مرکزی سِرام', slug: 'seram-hq', cat: 'office', status: 'در حال اجرا', done: false, area: '۱۲۰۰', loc: 'تهران', year: '۱۴۰۵', img: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&q=80', alt: 'فضای کار باز با نور طبیعی و مبلمان خنثی' },
+      { title: 'ویلای دو حیاط', slug: 'two-courtyard-villa', cat: 'villa', status: 'تکمیل‌شده', done: true, area: '۷۲۰', loc: 'کردان', year: '۱۴۰۰', img: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1200&q=80', alt: 'ویلای مسکونی با نمای سفید و محوطه سبز، کردان' }
+    ];
+    const f = this.state.filter;
+    const match = p => f === 'all' ? true : (f === 'done' ? p.done : (f === 'wip' ? !p.done : p.cat === f));
+    const shown = all.filter(match).map(p => ({
+      ...p,
+      meta: p.cat === 'villa' ? 'ویلایی · ' + p.area + ' متر مربع · ' + p.loc : (p.cat === 'residential' ? 'مسکونی · ' + p.area + ' متر مربع · ' + p.loc : (p.cat === 'office' ? 'اداری · ' + p.area + ' متر مربع · ' + p.loc : 'تجاری · ' + p.area + ' متر مربع · ' + p.loc)),
+      tagBg: p.done ? 'rgba(247,246,242,.9)' : 'rgba(183,110,77,.92)',
+      tagColor: p.done ? '#171717' : '#F7F6F2'
+    }));
+    const defs = [
+      { key: 'all', label: 'همه' }, { key: 'residential', label: 'مسکونی' }, { key: 'villa', label: 'ویلایی' },
+      { key: 'office', label: 'اداری' }, { key: 'commercial', label: 'تجاری' },
+      { key: 'done', label: 'تکمیل‌شده' }, { key: 'wip', label: 'در حال اجرا' }
+    ];
+    return {
+      shown,
+      countLabel: shown.length + ' پروژه',
+      filters: defs.map(d => ({
+        label: d.label,
+        bg: f === d.key ? '#171717' : 'transparent',
+        color: f === d.key ? '#F7F6F2' : '#5A5650',
+        border: f === d.key ? '#171717' : 'rgba(23,23,23,.2)',
+        pick: () => this.setState({ filter: d.key })
+      })),
+      rail: [
+        { img: 'https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=1000&q=80', alt: 'دیتیل بتن اکسپوز و پله', cap: 'CONCRETE DETAIL — KARDAN' },
+        { img: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1000&q=80', alt: 'نمای بیرونی ویلای مینیمال', cap: 'WHITE VOLUME — LAVASAN' },
+        { img: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=1000&q=80', alt: 'نمای بیرونی خانه مسکونی مدرن', cap: 'FACADE STUDY — TEHRAN' },
+        { img: 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1000&q=80', alt: 'آشپزخانه مینیمال با نور مخفی', cap: 'KITCHEN — RESIDENTIAL' },
+        { img: 'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=1000&q=80', alt: 'نمای بیرونی ساختمان با خطوط ساده', cap: 'PROPORTION — COMMERCIAL' }
+      ]
+    };
+  }
+}
+
+</script>
+</body>
+</html>
